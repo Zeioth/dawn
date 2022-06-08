@@ -136,7 +136,7 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Información",
+              "heading": "Pedidos",
               "menu": "footer"
             }
           },
@@ -150,8 +150,8 @@
           "footer-2": {
             "type": "text",
             "settings": {
-              "heading": "Our mission",
-              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+              "heading": "Nuestra misión",
+              "subtext": "<p>Camisetas Guays es una pequeña marca que crea y distribuye camisetas desde España. Solo vendemos ropa hecha con materiales naturales de la mas alta calidad. <\/p><p>Al comprar estas ayudando a un comercio local ♥️<\/p>"
             }
           }
         },
