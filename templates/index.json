@@ -105,7 +105,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Ver todo",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify:\/\/collections\/computer-nerd",
             "button_style_secondary_1": false,
             "button_label_2": "Sorprendeme!",
             "button_link_2": "",
