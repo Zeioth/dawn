@@ -121,10 +121,10 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/taco-min-min-short7_96a5db54-9cd7-4798-8493-0c48e6796404.png",
         "image_overlay_opacity": 50,
-        "image_height": "large",
+        "image_height": "medium",
         "adapt_height_first_image": true,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
