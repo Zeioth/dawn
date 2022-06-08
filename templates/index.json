@@ -33,7 +33,7 @@
     "1654652208b80e0b97": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "Te recomendamos",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -60,7 +60,7 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "Los mas vendidos",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
