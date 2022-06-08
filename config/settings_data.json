@@ -143,8 +143,8 @@
           "footer-1": {
             "type": "link_list",
             "settings": {
-              "heading": "Info",
-              "menu": "footer"
+              "heading": "Políticas",
+              "menu": "menu-inferior-politicas"
             }
           },
           "footer-2": {
