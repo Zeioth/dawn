@@ -34,7 +34,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "Te recomendamos",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -135,7 +135,7 @@
     "165465237003b8c6f4": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "Tampoco te pierdas",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
