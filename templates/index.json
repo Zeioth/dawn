@@ -1,53 +1,5 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/taco-min-min-short7_96a5db54-9cd7-4798-8493-0c48e6796404.png",
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": true,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
     "rich_text": {
       "type": "rich-text",
       "blocks": {
@@ -105,55 +57,52 @@
         "padding_bottom": 36
       }
     },
-    "collage": {
-      "type": "collage",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "collection-0": {
-          "type": "collection",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "collection": ""
+            "heading": "Image banner",
+            "heading_size": "h0"
           }
         },
-        "product": {
-          "type": "product",
+        "text": {
+          "type": "text",
           "settings": {
-            "product": "",
-            "second_image": false
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
           }
         },
-        "collection-1": {
-          "type": "collection",
+        "button": {
+          "type": "buttons",
           "settings": {
-            "collection": ""
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
+        "heading",
+        "text",
+        "button"
       ],
       "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
+        "image": "shopify:\/\/shop_images\/taco-min-min-short7_96a5db54-9cd7-4798-8493-0c48e6796404.png",
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "bottom-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
         "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "multicolumn": {
@@ -211,11 +160,9 @@
     }
   },
   "order": [
-    "image_banner",
     "rich_text",
     "featured_collection",
-    "collage",
-    "video",
+    "image_banner",
     "multicolumn"
   ]
 }
