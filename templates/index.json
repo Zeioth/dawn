@@ -166,8 +166,8 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "✈️ Envío a todo el mundo",
-            "text": "<p>Gratuito en pedidos superiores a 50€<\/p>",
+            "title": "✈️ Envío gratuito a todo el mundo",
+            "text": "<p>En pedidos superiores a 50€<\/p>",
             "link_label": "",
             "link": ""
           }
