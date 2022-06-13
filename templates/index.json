@@ -33,6 +33,7 @@
     },
     "1654652208b80e0b97": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Te recomendamos",
         "heading_size": "h1",
@@ -60,6 +61,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Los mas vendidos",
         "heading_size": "h1",
