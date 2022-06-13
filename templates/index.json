@@ -166,8 +166,8 @@
         "column1": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "✈️ Envío a todo el mundo",
+            "text": "<p>Envío Gratuito en pedidos superiores a 50€<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -175,8 +175,8 @@
         "column2": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "💵 Pago seguro",
+            "text": "<p>Pago 100% seguro con cifrado 256-bit SSL<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -184,8 +184,8 @@
         "column3": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "title": "🚚 30 dias de devolución",
+            "text": "<p>Devolución garantizada para todos los pedidos<\/p>",
             "link_label": "",
             "link": ""
           }
