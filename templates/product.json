@@ -35,7 +35,6 @@
         },
         "variant_picker": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "picker_type": "button"
           }
@@ -215,7 +214,7 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "Tampoco te pierdas",
+        "heading": "Productos similares",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
