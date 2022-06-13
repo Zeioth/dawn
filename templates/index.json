@@ -197,8 +197,8 @@
         "column3"
       ],
       "settings": {
-        "title": "Nos importa tu satisfacción ✅",
-        "heading_size": "h1",
+        "title": "Nos importa tu satisfacción",
+        "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
         "columns_desktop": 3,
