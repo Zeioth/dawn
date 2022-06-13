@@ -167,7 +167,7 @@
           "type": "column",
           "settings": {
             "title": "✈️ Envío a todo el mundo",
-            "text": "<p>Envío Gratuito en pedidos superiores a 50€<\/p>",
+            "text": "<p>Gratuito en pedidos superiores a 50€<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -176,7 +176,7 @@
           "type": "column",
           "settings": {
             "title": "💵 Pago seguro",
-            "text": "<p>Pago 100% seguro con cifrado 256-bit SSL<\/p>",
+            "text": "<p>100% seguro con cifrado 256-bit SSL<\/p>",
             "link_label": "",
             "link": ""
           }
