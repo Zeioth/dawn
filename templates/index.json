@@ -176,7 +176,7 @@
           "type": "column",
           "settings": {
             "title": "💵 Pago seguro",
-            "text": "<p>100% seguro con cifrado 256-bit SSL<\/p>",
+            "text": "<p>Con cifrado 256-bit SSL<\/p>",
             "link_label": "",
             "link": ""
           }
