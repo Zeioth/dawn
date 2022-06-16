@@ -97,6 +97,7 @@
     "predictive_search_show_price": false,
     "currency_code_enabled": false,
     "cart_type": "notification",
+    "show_cart_note": true,
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
