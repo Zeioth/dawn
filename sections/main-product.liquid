@@ -21,11 +21,10 @@
       }
     }
   {%- endstyle -%}
-
+  {% include 'teeinblue-scripts' %}
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
   <!-- HACK: Load custom tshirt styles only for custom tshirt-->
   {% if product.title == "Crea tu propia camiseta" %}
-    {% include 'teeinblue-scripts' %}
     {% include 'teeinblue-product-loader' %}
   {% endif %}
 
