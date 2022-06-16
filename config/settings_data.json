@@ -198,6 +198,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "3675257595977696335": {
+        "type": "shopify:\/\/apps\/pwa-by-ampify-me\/blocks\/app-embed\/f3b239f7-3e90-4ab2-8458-5a83727f15a6",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },
