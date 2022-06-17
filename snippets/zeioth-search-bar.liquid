@@ -1,0 +1,106 @@
+<style>  
+
+  /*Show it on the header only on desktop*/
+  @media screen and (max-width: 990px) {
+    .custom-search-bar {
+      display: none;
+    }
+
+  } 
+  
+  @media screen and (min-width: 990px) {
+
+    
+    .search__button{
+      color: #7d7a9c;
+      margin-right: 8px;
+    }
+    
+    #Search-desktop {
+      border-radius: 4px;
+      background: #f2f2f6;
+      height: 55px;
+      width: 400px; /* Use a percentage to make it shrink on mouseover*/
+    }
+    
+    /*Firefox appearance optimization*/
+    @supports (-moz-appearance:none) {
+      #Search-desktop {
+        height: 45px; 
+      }
+    }
+    
+    /*Fix for weird borders*/
+    .field::after, .select::after, .customer .field::after, .customer select::after, .localization-form__select::after{
+      content: none;
+    }
+  }
+  
+
+</style>
+
+<span class="custom-search-bar" >
+<center>
+<!--Search Bar-->
+{%- if section.settings.logo_position != 'top-center' -%}
+{%- if settings.predictive_search_enabled -%}
+<predictive-search class="search-modal__form" style="grid-area: 2;" data-loading-text="{{ 'accessibility.loading' | t }}">
+{%- endif -%}
+
+<form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+
+<div class="form-container">
+<div class="field" >
+
+<input class="search__input field__input"
+id="Search-desktop"
+type="search"
+name="q"
+value=""
+size="38"
+placeholder=" "
+{%- if settings.predictive_search_enabled -%}
+role="combobox"
+aria-expanded="false"
+aria-owns="predictive-search-results-list"
+aria-controls="predictive-search-results-list"
+aria-haspopup="listbox"
+aria-autocomplete="list"
+autocorrect="off"
+autocomplete="off"
+autocapitalize="off"
+spellcheck="false"
+{%- endif -%}
+>
+
+<!-- TCC: modified label old was: 'general.search.search' | t {{ 'general.search.search' | t }}-->
+<label class="field__label alignSearchText" for="Search-In-Modal">Buscar</label>
+<input type="hidden" name="options[prefix]" value="last">
+<button class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+<svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
+<use href="#icon-search">
+</svg>
+</button>
+</div>
+</div>
+
+{%- if settings.predictive_search_enabled -%}
+<div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+<div class="predictive-search__loading-state">
+<svg aria-hidden="true" focusable="false" role="presentation" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+<circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+</svg>
+</div>
+</div>
+
+<span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+{%- endif -%}
+</form>
+
+{%- if settings.predictive_search_enabled -%}
+</predictive-search>
+{%- endif -%}
+
+{%- endif -%}
+</center>
+</span>
