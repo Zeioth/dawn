@@ -33,7 +33,22 @@
   }
 }
 
-@media screen and (min-width: 750px) {
+/*HACK: Fix to correctly display search suggestions on desktop*/
+@media screen and (min-width: 990px) {
+  .predictive-search {
+    border-top: none;
+    width: calc(100% + 0.2rem);
+  }
+
+  .header predictive-search {
+    position: absolute;
+    margin-left: calc(1.6%);;
+    margin-right: calc(1.6%);
+    max-width: 330px; /* Searchbar width - desktop */
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
   .predictive-search {
     border-top: none;
     width: calc(100% + 0.2rem);
