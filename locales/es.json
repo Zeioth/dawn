@@ -438,10 +438,7 @@
         "back_to_shipping_method": "Volver a envío"
       },
       "order_summary": {
-        "shipping_label": "Envío",
-        "deferred_payment_info": {
-          "description_html": "Si tienes alguna pregunta sobre tu pedido, test."
-        }
+        "shipping_label": "Envío"
       }
     }
   },
