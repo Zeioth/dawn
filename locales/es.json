@@ -441,7 +441,7 @@
         "shipping_label": "Envío"
       },
       "thank_you": {
-        "contact_us_html": "{{ '¿Necesitas ayuda?' | link_to: 'https:\/\/camisetasguays.com\/pages\/contact' }}"
+        "contact_us_html": "¿Necesitas ayuda? <a href=\"\/pages\/contact\">Ponte en contacto con nosotros.<\/a>"
       }
     }
   },
