@@ -441,7 +441,8 @@
         "shipping_label": "Envío"
       },
       "thank_you": {
-        "contact_us_html": "¿Necesitas ayuda? <a href=\"\/pages\/contact\">Ponte en contacto con nosotros.<\/a>"
+        "contact_us_html": "¿Necesitas ayuda? <a href=\"\/pages\/contact\">Ponte en contacto con nosotros.<\/a>",
+        "attempted_delivery_description_html": "Se intentó entregar tu pedido sin éxito. <a href=\"\/pages\/contact\">Ponte en contacto con nosotros<\/a> para programar otra entrega."
       }
     }
   },
