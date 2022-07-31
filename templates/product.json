@@ -57,6 +57,12 @@
           "settings": {
           }
         },
+        "e78965eb-a945-4fda-b289-593e3a7566a5": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- assign current_variant = product.selected_or_first_available_variant -%}\nCod. Artículo: {{ current_variant.sku }}"
+          }
+        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "disabled": true,
@@ -115,6 +121,7 @@
         "quantity_selector",
         "buy_buttons",
         "description",
+        "e78965eb-a945-4fda-b289-593e3a7566a5",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
