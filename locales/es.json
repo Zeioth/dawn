@@ -147,7 +147,7 @@
       },
       "view_full_details": "Ver todos los detalles",
       "include_taxes": "IVA incluido.",
-      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> se calculan en la pantalla de pago.",
+      "shipping_policy_html": "Los <a href=\"{{ link }}\">gastos de envío<\/a> son gratis al pedir 2 productos. 15% de descuento al pedir 3 o mas.",
       "choose_options": "Seleccionar opciones",
       "choose_product_options": "Elegir opciones para {{ product_name }}"
     },
