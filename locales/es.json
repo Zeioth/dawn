@@ -147,7 +147,7 @@
       },
       "view_full_details": "Ver todos los detalles",
       "include_taxes": "IVA incluido.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Gastos de envío<\/a> gratuitos al pedir 2 productos. OFERTA DE VERANO: Descuento del 15%  al pedir 3.",
+      "shipping_policy_html": "<a href=\"{{ link }}\">Gastos de envío<\/a> gratuitos al pedir 2 productos. OFERTA: Descuento del 15%  al pedir 3.",
       "choose_options": "Seleccionar opciones",
       "choose_product_options": "Elegir opciones para {{ product_name }}"
     },
