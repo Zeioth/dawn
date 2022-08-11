@@ -33,7 +33,7 @@
  gtag('event', 'view_cart', {
  'send_to': 'AW-10906879768',
  'ecomm_pagetype': 'cart',
- 'ecomm_prodid': [{% for item in cart.items %}'{{item.product.id}}'{% unless forloop.last %},{% endunless %}{% endfor %}],
+ 'ecomm_prodid': [{% for item in cart.items %}’shopify_ES_{{item.product.id}}_{{item.variant.id}}'{% unless forloop.last %},{% endunless %}{% endfor %}],
  'ecomm_totalvalue': '{{cart.total_price | money_without_currency | remove: ',' }}'
  });
 </script>
