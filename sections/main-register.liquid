@@ -1,9 +1,4 @@
-<!-- What we are doing here is to send an event to GA4. We previously registered the event
-in GA4 under "conversions", this allow Google Ads to register it as conversion -->
-<!-- hack: zeioth BEGIN Global site tag (gtag.js) - Google Ads V1.7 -->
-<!-- Event snippet for Registro (test) (1) conversion page -->
-<!-- Event snippet for Registro (test) (1) conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<!-- hack GOOGLE ADS: al llamar esta función en un onclick, registra un evento en gads en la conversion que tenga el valor de send_to -->
 <script>
 function gads_repors_new_user(url) {
   var callback = function () {
