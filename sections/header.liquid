@@ -39,16 +39,14 @@ function gtag_report_open_cart(url) {
 <!-- Event snippet for Pulsa el botón Pagar el pedido en Shopify (custom) conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-function gtag_report_click_pay_order_button(url) {
+function gtag_report_click_start_checkout_button(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
       window.location = url;
     }
   };
-  gtag('event', 'conversion', {
+  gtag('event', 'start_checkout', {
       'send_to': 'AW-10906879768/QE8hCNmNzNQDEJiO59Ao',
-      'value': 1.0,
-      'currency': 'EUR',
       'event_callback': callback
   });
   return false;
