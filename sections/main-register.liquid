@@ -2,7 +2,7 @@
 <!-- Solo cuenta si el usuario se registra la primera vez que visita la web. Esto nos hace perder algunas conversiones autenticas pero evita que pueda ser explotado. -->
 {% if first_time_accessed %}
 <script>
-function gads_repors_new_user(url) {
+function gads_report_new_user(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
       window.location = url;
@@ -151,7 +151,7 @@ function gads_repors_new_user(url) {return false;}
         {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
       </span>
     {%- endif -%}
-    <button onclick='gads_repors_new_user()'>
+    <button onclick='gads_report_new_user()'>
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
