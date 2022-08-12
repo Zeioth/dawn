@@ -1,7 +1,7 @@
 <!-- hack: Event snippet for Realiza una busqueda predictiva en Shopify (custom) conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-function gtag_report_conversion(url) {
+function gtag_report_predictive_search(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
       window.location = url;
@@ -115,7 +115,7 @@ function gtag_report_conversion(url) {
                 autocomplete="off"
                 autocapitalize="off"
                 spellcheck="false"
-                onchange="predictive_search"
+                onchange="gtag_report_predictive_search()"
               {%- endif -%}
             >
             <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
