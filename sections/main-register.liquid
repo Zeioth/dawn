@@ -1,12 +1,25 @@
+<!-- hack GOOGLE ADS: al llamar esta función en un onclick, registra un evento en gads en la conversion que tenga el valor de send_to -->
+<!-- Solo cuenta si el usuario se registra la primera vez que visita la web. Esto nos hace perder algunas conversiones autenticas pero evita que pueda ser explotado. -->
 {% if first_time_accessed %}
-<!-- Event snippet for Registro de usuario (Shopify) conversion page -->
 <script>
+function gads_repors_new_user(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
   gtag('event', 'register_new_user', {
-      'send_to': 'AW-10906879768/BM8NCKrV_NQDEJiO59Ao',
+      'send_to': 'AW-10906879768/y0NhCNC5xdQDEJiO59Ao',
+      'event_callback': callback
   });
+  return false;
+}
 </script>
-<!-- END -->
+{% else %}
+function gads_repors_new_user(url) {return false;}
 {% endif %}
+<!-- END -->
+
 
 
 {{ 'customer.css' | asset_url | stylesheet_tag }}
@@ -138,7 +151,7 @@
         {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
       </span>
     {%- endif -%}
-    <button>
+    <button onclick='gads_repors_new_user()'>
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
