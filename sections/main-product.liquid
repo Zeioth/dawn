@@ -1,3 +1,21 @@
+<!-- hack GOOGLE ADS: al llamar esta función en un onclick, registra un evento en gads en la conversion que tenga el valor de 'send_to' -->
+<!-- Está conversión está configurada para ser detectada solo una vez por GADS. Pero un usuario que introduce datos erroneos y luego se va será contado como hit en su sesión GADS. Fiabilidad: 98% -->
+<script>
+function gads_report_first_contact(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'add_to_cart', {
+      'send_to': 'AW-10906879768/kOSMCK7NyNQDEJiO59Ao',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+<!-- END -->
+
 <section id="MainProduct-{{ section.id }}" class="page-width section-{{ section.id }}-padding" data-section="{{ section.id }}">
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
@@ -433,6 +451,7 @@
                     <button
                       type="submit"
                       name="add"
+                      onclick=""
                       class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                       {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
