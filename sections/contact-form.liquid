@@ -107,7 +107,7 @@ function gads_report_first_contact(url) {
         <label class="form__label field__label" for="ContactForm-body">{{ 'templates.contact.form.comment' | t }}</label>
       </div>
       <div class="contact__button">
-        <button type="submit" class="button">
+        <button type="submit" class="button" onclick="gads_report_first_contact()">
           {{ 'templates.contact.form.send' | t }}
         </button>
       </div>
