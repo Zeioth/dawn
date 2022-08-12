@@ -451,7 +451,7 @@ function gads_report_add_to_cart(url) {
                     <button
                       type="submit"
                       name="add"
-                      onclick=""
+                      onclick="gads_report_add_to_cart()"
                       class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                       {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
