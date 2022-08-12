@@ -1,5 +1,6 @@
 <!-- hack: Event snippet for Realiza una busqueda predictiva en Shopify (custom) conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button.
+WARNING: It's very important that this action only triggers once. -->
 <script>
 function gtag_report_predictive_search(url) {
   var callback = function () {
@@ -8,7 +9,7 @@ function gtag_report_predictive_search(url) {
     }
   };
   gtag('event', 'predictive_search', {
-      'send_to': 'AW-10906879768/4cGgCKbQytQDEJiO59Ao',
+      'send_to': 'AW-10906879768/g7uXCI-Ty9QDEJiO59Ao',
       'event_callback': callback
   });
   return false;
