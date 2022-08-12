@@ -1,5 +1,5 @@
 <!-- hack GOOGLE ADS: al llamar esta función en un onclick, registra un evento en gads en la conversion que tenga el valor de send_to -->
-<!-- Solo cuenta si el usuario se registra la primera vez que  -->
+<!-- Solo cuenta si el usuario se registra la primera vez que visita la web. Esto nos hace perder algunas conversiones autenticas pero evita que pueda ser explotado. -->
 {% if first_time_accessed %}
 <script>
 function gads_repors_new_user(url) {
