@@ -98,6 +98,7 @@ function gtag_report_predictive_search(url) {
         <form action="{{ routes.search_url }}" method="get" role="search" class="search">
           <div class="field">
             <input
+              onchange="gtag_report_predictive_search()"
               class="search__input field__input"
               id="Search-In-Template"
               type="search"
@@ -115,7 +116,6 @@ function gtag_report_predictive_search(url) {
                 autocomplete="off"
                 autocapitalize="off"
                 spellcheck="false"
-                onchange="gtag_report_predictive_search()"
               {%- endif -%}
             >
             <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
