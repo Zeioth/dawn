@@ -1,7 +1,6 @@
 <!-- What we are doing here is to send an event to GA4. We previously registered the event
 in GA4 under "conversions", this allow Google Ads to register it as conversion -->
 <!-- hack: zeioth BEGIN Global site tag (gtag.js) - Google Ads V1.7 -->
-{% if first_time_accessed %}
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10906879768/kUphCO2y_NQDEJiO59Ao"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -15,7 +14,6 @@ gtag('event', 'register_new_user', {
 'send_to': 'AW-10906879768/kUphCO2y_NQDEJiO59Ao'
 });
 </script>
-{% endif %}
 <!-- zeioth END Global site tag (gtag.js) - Google Ads V1.7 -->
 
 {{ 'customer.css' | asset_url | stylesheet_tag }}
