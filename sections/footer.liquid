@@ -138,12 +138,6 @@
                 {%- endif -%}
               </div>
               {%- if form.posted_successfully? -%}
-                <!-- hack: Event snippet for Subscripción a la newsletter del footer en Shopify (custom) conversion page -->
-                <script>
-                  gtag('event', 'conversion', {
-                      'send_to': 'AW-10906879768/Ty2LCKWfytQDEJiO59Ao',
-                  });
-                </script>
                 <h3 class="newsletter-form__message newsletter-form__message--success form__message" id="ContactFooter-success" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
               {%- endif -%}
             {%- endform -%}
