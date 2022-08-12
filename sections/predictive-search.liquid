@@ -1,5 +1,14 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
 {%- if predictive_search.performed -%}
+  
+  <!-- hack: Event snippet for Realiza una busqueda predictiva en Shopify (custom) conversion page -->
+  <script>
+    gtag('event', 'predictive_search', {
+        'send_to': 'AW-10906879768/4cGgCKbQytQDEJiO59Ao'
+    });
+  </script>
+  <!-- END -->
+
   <div id="predictive-search-results">
     {%- if predictive_search.resources.products.size > 0 -%} 
       <h2 id="predictive-search-products" class="predictive-search__heading text-body caption-with-letter-spacing">
