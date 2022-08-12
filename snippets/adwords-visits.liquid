@@ -1,4 +1,5 @@
-{% if request.path == {{- '/products/' | split: '/' | first -}} %}
+{% assign is_prod = request.path %}
+{% if request.path | split: '/' | first  == '/products' %}
   <!-- Google ads conversion events to record visits (product)-->
   <script>
     gtag('event', 'product_view', {
