@@ -128,7 +128,7 @@
       </span>
     {%- endif -%}
     <!-- hack: here we are sending an event to GA4, which is registered under conversions, which we can then import in the from Google Ads conversion section when creating a new conversion. -->
-    <button onclick="dataLayer.push({'event': 'register_new_user2'});">
+    <button onclick="dataLayer.push({'event': 'register_new_user'});">
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
