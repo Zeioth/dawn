@@ -1,4 +1,6 @@
 <!-- hack GOOGLE ADS: al llamar esta función en un onclick, registra un evento en gads en la conversion que tenga el valor de send_to -->
+<!-- Solo cuenta si el usuario se registra la primera vez que  -->
+{% if first_time_accessed %}
 <script>
 function gads_repors_new_user(url) {
   var callback = function () {
@@ -13,7 +15,10 @@ function gads_repors_new_user(url) {
   return false;
 }
 </script>
-
+{% else %}
+function gads_repors_new_user(url) {return false;}
+{% endif %}
+<!-- END -->
 
 
 {{ 'customer.css' | asset_url | stylesheet_tag }}
