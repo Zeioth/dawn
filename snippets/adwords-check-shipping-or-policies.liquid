@@ -1,4 +1,4 @@
-
+{% if first_time_accessed %}
   {% if request.path == '/policies/shipping-policy' or request.path == '/policies/refund-policy' or request.path == '/privacy-policy' or request.path == '/policies/terms-of-service' or request.path == '/policies/legal-notice' or request.path == '/policies/contact-information' %}
     <!-- Google ads conversion events related with shipping and policies-->
     <script>
@@ -7,3 +7,4 @@
       });
     </script>
   {% endif %}
+{% endif %}
