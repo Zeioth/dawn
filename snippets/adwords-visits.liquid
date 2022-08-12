@@ -5,19 +5,19 @@
         'send_to': 'AW-10906879768/8OrCCKbHgdUDEJiO59Ao'
     });
   </script>
-{% elsif request.path == '/search' %}
+{% endif  %}
+{% if request.path == '/search' %}
     <!-- Google ads conversion events to record visits (search results page)-->
   <script>
     gtag('event', 'search_results', {
-        'send_to': ''
+        'send_to': 'AW-10906879768/Iec3CM3ZgdUDEJiO59Ao'
     });
   </script>
-{% else  %}
-  <!-- Google ads conversion events to record visits (any)-->
-  <script>
-    gtag('event', 'page_view', {
-        'send_to': 'AW-10906879768/0ghYCPHa99QDEJiO59Ao'
-    });
-  </script>  
-{% endif %}
+{% endif  %}
+<!-- Google ads conversion events to record visits (any)-->
+<script>
+  gtag('event', 'page_view', {
+      'send_to': 'AW-10906879768/0ghYCPHa99QDEJiO59Ao'
+  });
+</script>  
 
