@@ -1,5 +1,7 @@
 <!-- hack: Event snippet for Realiza una busqueda predictiva en Shopify (custom) conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button.
+Because we only trigger it once per click, there is no danger in triggering it several times.
+But if we detect exploits, we can turn back search conversions to single hit. -->
 <script>
 function gtag_report_predictive_search(url) {
   var callback = function () {
