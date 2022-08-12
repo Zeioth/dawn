@@ -1,3 +1,23 @@
+<!-- What we are doing here is to send an event to GA4. We previously registered the event
+in GA4 under "conversions", this allow Google Ads to register it as conversion -->
+<!-- hack: zeioth BEGIN Global site tag (gtag.js) - Google Ads V1.7 -->
+{% if first_time_accessed %}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B8TYT9DCJ7"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-B8TYT9DCJ7');
+</script>
+<script>
+gtag('event', 'register_new_user', {
+'send_to': 'G-B8TYT9DCJ7'
+});
+</script>
+{% endif %}
+<!-- zeioth END Global site tag (gtag.js) - Google Ads V1.7 -->
+
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
@@ -127,8 +147,7 @@
         {{ form.errors.translated_fields['password'] | capitalize }} {{ form.errors.messages['password'] }}.
       </span>
     {%- endif -%}
-    <!-- hack: here we are sending an event to GA4, which is registered under conversions, which we can then import in the from Google Ads conversion section when creating a new conversion. -->
-    <button onclick="dataLayer.push({'event': 'register_new_user'});">
+    <button>
       {{ 'customer.register.submit' | t }}
     </button>
   {%- endform -%}
