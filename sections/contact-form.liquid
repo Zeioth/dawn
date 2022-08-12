@@ -1,3 +1,26 @@
+<!-- hack GOOGLE ADS: al llamar esta función en un onclick, registra un evento en gads en la conversion que tenga el valor de 'send_to' -->
+<!-- Está conversión está configurada para ser detectada solo una vez por GADS. Pero un usuario que introduce datos erroneos y luego se va será contado como hit en su sesión GADS. Fiabilidad: 98% -->
+<script>
+function gads_report_first_contact(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'send_contact_form', {
+      'send_to': 'AW-10906879768/skwfCLid_tQDEJiO59Ao',
+      'event_callback': callback
+  });
+  var enhanced_conversion_data = {
+    "email": "{{ customer.email }}",
+    "first_name": "{{ billing_address.first_name }}",
+    "last_name": "{{billing_address.last_name}}"
+  };
+  return false;
+}
+</script>
+<!-- END -->
+
 {{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
