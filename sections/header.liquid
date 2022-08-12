@@ -18,6 +18,24 @@ function gtag_report_predictive_search(url) {
 </script>
 
 
+<!-- Event snippet for Click en ir al carrito conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. 
+Configure it to count only once. -->
+<script>
+function gtag_report_open_cart(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'open_cart', {
+      'send_to': 'AW-10906879768/fpIQCMHgy9QDEJiO59Ao',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 
 
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -609,7 +627,7 @@ function gtag_report_predictive_search(url) {
         </a>
       {%- endif -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      <a href="{{ routes.cart_url }}" onclick="gtag_report_open_cart()" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
