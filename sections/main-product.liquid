@@ -1,5 +1,6 @@
 <!-- hack GOOGLE ADS: al llamar esta función en un onclick, registra un evento en gads en la conversion que tenga el valor de 'send_to' -->
-<!-- Está conversión está configurada para ser detectada solo una vez por visitante por GADS. -->
+<!-- Está conversión está configurada para ser detectada varias vez por visitante por GADS.
+     De esta forma podrá dispararse en sesiones de navegación futuras. -->
 <script>
 function gads_report_add_to_cart(url) {
   var callback = function () {
@@ -7,10 +8,12 @@ function gads_report_add_to_cart(url) {
       window.location = url;
     }
   };
-  gtag('event', 'add_to_cart', {
-      'send_to': 'AW-10906879768/kOSMCK7NyNQDEJiO59Ao',
-      'event_callback': callback
-  });
+  {% if first_time_accessed %}
+    gtag('event', 'add_to_cart', {
+        'send_to': 'AW-10906879768/kOSMCK7NyNQDEJiO59Ao',
+        'event_callback': callback
+    });
+  {% endif %}
   return false;
 }
 </script>
