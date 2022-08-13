@@ -7,10 +7,12 @@ function gads_report_add_to_cart(url) {
       window.location = url;
     }
   };
-  gtag('event', 'add_to_cart', {
-      'send_to': 'AW-10906879768/kOSMCK7NyNQDEJiO59Ao',
-      'event_callback': callback
-  });
+  {% if first_time_accessed %}
+    gtag('event', 'add_to_cart', {
+        'send_to': 'AW-10906879768/kOSMCK7NyNQDEJiO59Ao',
+        'event_callback': callback
+    });
+  {% endif %}
   return false;
 }
 </script>
