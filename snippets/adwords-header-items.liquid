@@ -3,13 +3,13 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 Because we only trigger it once per click, there is no danger in triggering it several times.
 But if we detect exploits, we can turn back search conversions to single hit. -->
 <script>
-function gtag_report_predictive_search(url) {
+function gtag_report_search_button_click(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
       window.location = url;
     }
   };
-  gtag('event', 'predictive_search', {
+  gtag('event', 'search_button_click', {
       'send_to': 'AW-10906879768/1ZCLCMaO-tQDEJiO59Ao',
       'event_callback': callback
   });
