@@ -1,25 +1,19 @@
 <!-- Google ads conversion events to record visits (any)-->
 <script>
-  gtag('event', 'page_view', {
-      'send_to': 'AW-10906879768/KPVYCL7e-NQDEJiO59Ao'
-  });
+  gtag('event', 'page_view', {'send_to': 'AW-10906879768/KPVYCL7e-NQDEJiO59Ao'});
 </script>
 
 {% if first_time_accessed %}
   <!-- Google ads conversion events to record unique visitors (only once) -->
   <script>
-    gtag('event', 'unique_visitor', {
-        'send_to': 'AW-10906879768/WPCJCKiNltUDEJiO59Ao'
-    });
+    gtag('event', 'unique_visitor', {'send_to': 'AW-10906879768/WPCJCKiNltUDEJiO59Ao'});
   </script>
 {% endif %}
 
 {% if request.path == '/search' %}
     <!-- Google ads conversion events to record visits (search results page)-->
   <script>
-    gtag('event', 'search_result', {
-        'send_to': 'AW-10906879768/Iec3CM3ZgdUDEJiO59Ao'
-    });
+    gtag('event', 'search_result', {'send_to': 'AW-10906879768/Iec3CM3ZgdUDEJiO59Ao'});
   </script>
 {% endif  %}
 
