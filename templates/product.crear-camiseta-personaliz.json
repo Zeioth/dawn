@@ -18,7 +18,7 @@
         "caption": {
           "type": "text",
           "settings": {
-            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text": "Elije color y talla, sube tu imagen, y añadela al carrito!",
             "text_style": "subtitle"
           }
         },
@@ -54,6 +54,7 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
