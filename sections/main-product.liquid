@@ -53,9 +53,9 @@ function gads_report_add_to_cart(url) {
       var fileControl = document.getElementById('tee-photo-layer-598010');
       var fileArea = document.getElementByClassName('tee-photo-image');
       
-      fileArea.addEventListener("click", {
+      fileArea.onclick = function(){
         fileControl.dispatchEvent(new Event('input', {bubbles:true}));
-      });
+      }; 
       
     </script>
   {% endif %}
