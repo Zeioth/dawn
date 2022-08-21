@@ -51,11 +51,16 @@ function gads_report_add_to_cart(url) {
     {% endstyle %}
     <script>
       var fileControl = document.getElementById('tee-photo-layer-598010');
-      var collection = document.getElementsByClassName("icon-placeholder");
-      for (let i = 0; i <= collection.length; i++) {
-         collection[i].style.backgroundColor = "red";
+      var classname = document.getElementsByClassName("tee-photo-placeholder");
+      
+      var myFunction = function() {
+          var attribute = this.getAttribute("data-myattribute");
+          alert(attribute);
+      };
+      
+      for (var i = 0; i < classname.length; i++) {
+          classname[i].addEventListener('click', myFunction, false);
       }
-    </script>
   {% endif %}
   
 
