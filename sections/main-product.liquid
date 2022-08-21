@@ -56,7 +56,6 @@ function gads_report_add_to_cart(url) {
         for (let i = 0; i < collection.length; i++) {
             collection[i].onclick = function(elemento){
               alert("ok");
-              elemento.dispatchEvent(new Event('input', {bubbles:true}));
           };
         }
       })
