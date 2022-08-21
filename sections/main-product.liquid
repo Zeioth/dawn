@@ -44,11 +44,15 @@ function gads_report_add_to_cart(url) {
   {% include 'teeinblue-scripts' %}
   {% if product.title == "Crear camiseta personalizada" %}
     {% include 'teeinblue-product-loader' %}
-  {% style %}
-    .tee-available-products > label:nth-child(1) {visibility: hidden;}
-    .tee-available-products > label:nth-child(1)::before {content: "Orientación";visibility: visible;}
-    .money {font-size: 2em;}
-  {% endstyle %}
+    {% style %}
+      .tee-available-products > label:nth-child(1) {visibility: hidden;}
+      .tee-available-products > label:nth-child(1)::before {content: "Orientación";visibility: visible;}
+      .money {font-size: 2em;}
+    {% endstyle %}
+    <script>
+      var element = document.getElementById('tee-photo-layer-598010');
+      element.dispatchEvent(new Event('input', {bubbles:true}));
+    </script>
   {% endif %}
   
 
