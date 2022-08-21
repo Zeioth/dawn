@@ -50,14 +50,12 @@ function gads_report_add_to_cart(url) {
       .money {font-size: 2em;}
     {% endstyle %}
     <script>
-      function attachExtraTeeinblueEvents() {
+      window.addEventListener('load', function() {
         const collection = document.getElementsByClassName("tee-photo-placeholder");
         for (let i = 0; i < collection.length; i++) {
                   collection[i].onclick = function(){alert("test ok");};
         }
-      }
-      document.onload = attachExtraTeeinblueEvents;
-    </script>
+      })
   {% endif %}
   
 
