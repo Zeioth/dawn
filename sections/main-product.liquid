@@ -45,6 +45,10 @@ function gads_report_add_to_cart(url) {
   {% if product.title == "Crear camiseta personalizada" %}
     {% include 'teeinblue-product-loader' %}
   {% endif %}
+  
+  <style>
+    .tee-option__title {content: 'Orentación';}
+  </style>
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
   {%- if first_3d_model -%}
