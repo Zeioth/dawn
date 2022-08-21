@@ -47,7 +47,7 @@ function gads_report_add_to_cart(url) {
   {% endif %}
   
   {% style %}
-    .tee-option__title {color: red;}
+    .tee-option__title::after {content: "Oriencación";}
   {% endstyle %}
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
