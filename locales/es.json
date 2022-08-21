@@ -147,7 +147,7 @@
       },
       "view_full_details": "Ver todos los detalles",
       "include_taxes": "",
-      "shipping_policy_html": "<strong>COMO FUNCIONA?<\/strong> Elije color y talla, sube tu foto, y añadela al carrito!",
+      "shipping_policy_html": "<strong>COMO FUNCIONA?<\/strong> Elije color y talla, sube tu imagen, y añadela al carrito!",
       "choose_options": "Seleccionar opciones",
       "choose_product_options": "Elegir opciones para {{ product_name }}"
     },
