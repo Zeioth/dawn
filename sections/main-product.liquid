@@ -60,7 +60,12 @@ function gads_report_add_to_cart(url) {
               elemento.dispatchEvent(new Event('input', {bubbles:true}));
           };
         }*/
-      })
+
+        // Prepend label field to tee-photo
+        const teePhoto = document.getElementsByClassName("tee-photo")[0];
+        teePhoto.prepend("<label for="tee-photo-layer-129732" class="tee-btn tee-btn--upload"></label>");
+
+        // Add 'tee-photo-placeholder' as children
       </script>
   {% endif %}
   
