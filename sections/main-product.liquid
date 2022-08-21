@@ -50,14 +50,13 @@ function gads_report_add_to_cart(url) {
       .money {font-size: 2em;}
     {% endstyle %}
     <script>
-  function codeAddress() {
-      const collection = document.getElementsByClassName("product__title");
-      for (let i = 0; i < collection.length; i++) {
-        
-      }
+      function attachExtraTeeinblueEvents() {
+        const collection = document.getElementsByClassName("product__title");
+        for (let i = 0; i < collection.length; i++) {
+                  collection[i].onclick = function(){alert("ok");};
         }
-
-      window.onload = codeAddress;
+      }
+      window.onload = attachExtraTeeinblueEvents;
     </script>
   {% endif %}
   
