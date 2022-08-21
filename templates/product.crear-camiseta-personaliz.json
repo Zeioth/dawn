@@ -1,0 +1,246 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "d1d4362d-b973-42bd-80f3-23fe32d5fcc5": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<!--Improves color \nswatch shift-->\n<script>\n<\/script>\n\n\n{%- style -%}\n\/* Product Detail Page *\/\n.globo-swatch-product-detail .swatch--gl li .globo-style--button {\n    border-color: #000000;\n    color: #000000;\n    background-color: #fff;\n}\n.globo-swatch-product-detail .swatch--gl li .globo-style--button:hover {\n    border-color: #000000;\n    color: #ffffff;\n    background-color: #000000;\n}\n\n.globo-swatch-product-detail ul.value li.select-option input:checked+.globo-style--button {\n    border-color: #000000;\n    color: #ffffff;\n    background-color: #000000;\n}\n\n.globo-swatch-product-detail .swatch--gl li .globo-border-color-swatch:not(.globo-detail-border-style-none) {\n    border-color: #9b9b9b;\n}\n\n.globo-swatch-product-detail .swatch--gl li .globo-border-color-swatch:not(.globo-detail-border-style-none):hover {\n    border-color: #9013fe;\n}\n\n.globo-swatch-product-detail ul.value li.select-option input:checked+label.globo-border-color-swatch:not(.globo-detail-border-style-none) {\n    border-color: #4a90e2;\n}\n.swatches-globo {\n    margin-bottom: 20px;\n}\n.globo-swatch-product-detail {\n    width: 100%;\n    clear: both;\n}\n.swatch--gl:after {\n    content: \"\";\n    display: table;\n    clear: both;\n}\n.globo-swatch-product-detail ul.value {\n    padding: 0;\n    margin: 0;\n    display: flex;\n    flex-wrap: wrap;\n}\n.swatches-globo--list ul.value {\n    display: flex;\n    flex-wrap: wrap;\n}\n.globo-product-swatch-price {\n    margin-bottom: 15px;\n}\n.globo-swatch-product-detail .swatch--gl {\n    margin-bottom: 15px;\n    min-height: 75px;\n    position: relative;\n}\n.globo-collection-swatch-price {\n    padding: 10px 0;\n    font-size: 14px;\n}\n.globo-add-to-cart {\n    margin-top: 10px;\n}\n.swatches-globo .swatch--gl {\n    margin-bottom: 10px;\n    position: relative;\n}\n.globo-swatch-product-detail .swatch--gl input,\n.swatches-globo .swatch--gl input {\n    display: none;\n}\n.globo-swatch-product-detail .swatch--gl ul.value li:not(ul.ul-globo-dropdown-option li),\n.swatches-globo .swatch--gl .ul-swatches-list li:not(ul.ul-globo-dropdown-option li) {\n    display: block;\n    float: left;\n}\n.globo-swatch-product-detail .swatch--gl ul.value li:not(ul.ul-globo-dropdown-option li),\n.swatches-globo .swatch--gl .ul-swatches-list li:not(ul.ul-globo-dropdown-option li, .owl-item > li) {\n    margin: 0 10px 10px 0 !important;\n}\n.globo-cs-product_oldprice {\n    text-decoration: line-through;\n}\n.globo-selector-all,\n.swatches-globo .select-wrapper {\n    display: none !important;\n}\n.globo-swatch-product-detail .swatch--gl .ul-globo-dropdown-option li.swatches-options,\n.swatches-globo .swatch--gl .ul-globo-dropdown-option li.swatches-options {\n    background-color: #fff;\n    -moz-box-shadow: 0 1px 0 #dedede, 0 -1px 0 #dedede;\n    display: none;\n    float: none;\n    list-style: none;\n    margin: 0 !important;\n    cursor: pointer;\n    position: relative;\n}\n.globo-swatch-product-detail .swatch--gl .ul-globo-dropdown-option li.swatches-options label,\n.swatches-globo .swatch--gl .ul-globo-dropdown-option li.swatches-options label {\n    display: block;\n    padding: 8px 40px 8px 10px;\n    font-size: 13px;\n    line-height: 1.4 !important;\n    float: none !important;\n}\n.globo-swatch-product-detail .swatch--gl .ul-globo-dropdown-option li.swatches-options:first-child,\n.swatches-globo .swatch--gl .ul-globo-dropdown-option li.swatches-options:first-child {\n    display: block;\n}\n.globo-arrow-select svg {\n    width: 18px;\n    height: 18px;\n}\n.globo-arrow-select {\n    position: absolute;\n    right: 15px;\n    top: 12px;\n    z-index: 3;\n}\n.ul-globo-dropdown-option li.swatches-options .globo-arrow-select {\n    display: none;\n}\n.ul-globo-dropdown-option li.swatches-options:first-child .globo-arrow-select {\n    display: block;\n}\n.globo-arrow-select {\n    border: solid #3a3a3a;\n    border-width: 0 2px 2px 0;\n    display: inline-block;\n    padding: 2.5px;\n    transform: rotate(45deg);\n    -webkit-transform: rotate(45deg);\n}\n.show:not(.modal, .modal-backdrop) {\n    display: block !important;\n}\n.errorOptions .error {\n    color: red;\n}\n.globo-swatch-product-detail li label,\n.swatches-globo .swatch--gl li label {\n    position: relative;\n    font-size: 13px;\n    cursor: pointer;\n    border: 1px solid transparent;\n    -webkit-transition: 0.2s all ease-in-out;\n    transition: 0.2s all ease-in-out;\n    min-width: auto !important;\n    margin: 0 !important;\n    padding: 0;\n    display: block;\n}\n.globo-swatch-product-detail .swatch--gl li .globo-style--button,\n.swatches-globo .swatch--gl li .globo-style--button {\n    padding: 5px 10px;\n    display: block;\n    text-align: center;\n}\n.globo-swatch-product-detail .swatch--gl li .globo-style--button {\n    border-color: #e4e4e4;\n}\n.globo-swatch-product-detail .swatch--gl li label .attr-title-hover,\n.swatches-globo .swatch--gl li label .attr-title-hover {\n    font-size: 14px;\n    position: absolute;\n    bottom: 80%;\n    text-indent: 0;\n    background: #000;\n    padding: 5px 10px;\n    line-height: 1;\n    border-radius: 4px;\n    margin-bottom: 10px;\n    min-width: 50px;\n    color: #fff;\n    left: 50%;\n    white-space: pre;\n    text-align: center;\n    text-transform: none;\n    transform: translate(-50%, 0);\n    -webkit-transform: translate(-50%, 0);\n    visibility: hidden;\n    opacity: 0;\n    transition: all 250ms ease-out;\n}\n.globo-swatch-product-detail .swatch--gl li label .attr-title-hover:after,\n.swatches-globo .swatch--gl li label .attr-title-hover:after {\n    content: \"\";\n    position: absolute;\n    left: 50%;\n    bottom: -9px;\n    border-width: 4px 4px 0 4px;\n    border-style: solid;\n    border-color: #000 transparent transparent transparent;\n    margin-bottom: 6px;\n    margin-left: -4px;\n    display: ruby;\n}\n.globo-swatch-product-detail li label:hover .attr-title-hover,\n.swatches-globo .swatch--gl li label:hover .attr-title-hover {\n    bottom: 100%;\n    opacity: 1;\n    visibility: visible;\n}\n.globo-detail-style-circle,\n.globo-style-circle {\n    border-radius: 50% !important;\n}\n.globo-border-style-none,\n.globo-detail-border-style-none {\n    border-top-width: 0 !important;\n    border-left-width: 0 !important;\n    border-bottom-width: 0 !important;\n    border-right-width: 0 !important;\n}\n.globo-swatch-product-detail .globo-detail-size-large,\n.swatches-globo .swatch--gl li .globo-size-large {\n    width: 50px;\n    height: 50px;\n}\n.globo-swatch-product-detail .globo-detail-size-medium,\n.swatches-globo .swatch--gl li .globo-size-medium {\n    width: 35px;\n    height: 35px;\n}\n.globo-swatch-product-detail .globo-detail-size-small,\n.swatches-globo .swatch--gl li .globo-size-small {\n    width: 25px;\n    height: 25px;\n    padding: 0;\n}\n.swatches-globo .swatch--gl li.swatches-more .globo-size-large {\n    line-height: 48px;\n}\n.swatches-globo .swatch--gl li.swatches-more .globo-size-medium {\n    line-height: 32px;\n}\n.swatches-globo .swatch--gl li.swatches-more .globo-size-small {\n    line-height: 22px;\n}\n.swatches-globo .swatch--gl li.swatches-more label:not(.globo-style--button) {\n    font-size: 16px;\n    text-align: center;\n}\n.swatches-globo .swatch--gl li .globo-style--button {\n    padding: 5px 10px;\n    font-size: 13px;\n}\n.globo-swatch-product-detail .globo-detail-size-small.globo-detail-border-style-double,\n.swatches-globo .swatch--gl li label.globo-size-small.globo-border-style-double {\n    width: 28px;\n    height: 28px;\n}\n.globo-swatch-product-detail .swatch--gl li label.globo-detail-border-style-double:before,\n.swatches-globo .swatch--gl li label.globo-border-style-double:before {\n    content: \"\";\n    display: block;\n    width: 100%;\n    height: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border: 3px solid transparent;\n    border-color: #fff;\n    box-sizing: border-box;\n}\n.globo-swatch-product-detail .swatch--gl li label.globo-detail-border-style-double.globo-detail-style-circle:before,\n.swatches-globo .swatch--gl li label.globo-border-style-double.globo-style-circle:before {\n    border-radius: 50%;\n}\n.globo-detail-hover-effects-zoom:hover,\n.globo-hover-effects-zoom:hover {\n    background-size: 130% !important;\n}\n.globo-detail-hover-size_change-reduce:hover,\n.globo-hover-size_change-reduce:hover {\n    -ms-transform: scale(0.8, 0.8);\n    transform: scale(0.8, 0.8);\n}\n.globo-detail-hover-size_change-increase:hover,\n.globo-hover-size_change-increase:hover {\n    -ms-transform: scale(1.2, 1.2);\n    transform: scale(1.2, 1.2);\n}\n.globo-button-style-rounded,\n.globo-detail-button-style-rounded {\n    border-radius: 5px;\n}\n.globo-swatch-product-detail .swatch--gl li .globo-detail-button-size-large,\n.swatches-globo .swatch--gl li .globo-button-size-large {\n    padding: 8px 16px;\n    font-size: 16px;\n}\n.globo-swatch-product-detail .swatch--gl li .globo-detail-button-size-small,\n.swatches-globo .swatch--gl li .globo-button-size-small {\n    padding: 3px 8px;\n    font-size: 12px;\n}\n.globo-detail-text-style-lowercase,\n.globo-text-style-lowercase {\n    text-transform: lowercase;\n}\n.globo-detail-text-style-uppercase,\n.globo-text-style-uppercase {\n    text-transform: uppercase;\n}\nlabel.name-option {\n    font-size: 14px;\n    font-weight: 700;\n    margin-bottom: 10px;\n    margin-top: 0;\n    display: block !important;\n    float: none !important;\n}\n.globo-out-of-stock.globo-sold-out-hide {\n    display: none !important;\n}\n.globo-out-of-stock.globo-sold-out-opacity label {\n    opacity: 0.3;\n    cursor: not-allowed;\n}\n.globo-out-of-stock.globo-sold-out-cross-out label:after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 50%;\n    right: 0;\n    border-top: 1px solid;\n    border-color: red;\n    -webkit-transform: rotate(-29deg);\n    -moz-transform: rotate(-29deg);\n    -ms-transform: rotate(-29deg);\n    -o-transform: rotate(-29deg);\n    transform: rotate(-29deg);\n}\n.swatch--gl ul:after {\n    content: \"\";\n    display: table;\n    clear: both;\n}\n.errorOptions {\n    color: red;\n    clear: both;\n    font-size: 13px;\n}\nul.ul-swatches-list {\n    padding: 0;\n    margin: 0;\n}\n.globo-align-content-center {\n    text-align: center;\n}\n.globo-align-content-center .value {\n    justify-content: center;\n}\n.globo-align-content-center .owl-carousel .owl-stage {\n    margin: auto;\n}\n.globo-swatch-product-detail .globo-align-content-center .globo-swatch-list ul li,\n.swatches-globo .globo-align-content-center .ul-swatches-list li {\n    display: inline-block;\n    float: none;\n    margin: 0 !important;\n    padding: 3px;\n}\n.globo-swatch-product-detail .globo-align-content-center .globo-swatch-list ul li label,\n.swatches-globo .globo-align-content-center .ul-swatches-list li label {\n    margin: 0 0 3px 0;\n}\n.globo-align-content-right {\n    text-align: right;\n}\n.globo-swatch-product-detail .globo-align-content-right .globo-swatch-list ul li,\n.swatches-globo .globo-align-content-right .ul-swatches-list li {\n    float: right;\n    margin: 0 0 10px 10px !important;\n}\n.globo-align-content-right .globo-add-to-cart {\n    float: right;\n}\n.globo-number-stock-variant {\n    margin-bottom: 15px;\n    font-weight: 700;\n}\n.hide:not(.is-active, .site-menu-handle, .flickity-slider .product-single__image-wrapper, .product-single__media-wrapper) {\n    display: none !important;\n}\n.swatches-globo .form-select-wrapper {\n    display: none;\n}\n.product-form .product-select-simple-wrapper {\n    display: block;\n}\nselect#ProductSelect-product-template,\nselect#product-select-simple,\nselect#productSelect {\n    display: none !important;\n}\n#AddToCartForm .globo-swatch-product-detail .swatch--gl label.name-option,\n.product_list .swatches-globo .swatch--gl label.name-option {\n    width: 100%;\n    border: 0;\n    display: block;\n    text-align: inherit;\n    height: auto !important;\n    line-height: inherit;\n    float: none;\n}\n#AddToCartForm .globo-swatch-product-detail .swatch--gl li .globo-style--button,\n.product_list .swatches-globo .swatch--gl li .globo-style--button {\n    height: auto !important;\n    line-height: inherit !important;\n}\n.purchase-box .selection-wrapper .selector-wrapper.full-width,\n.purchase-box .selection-wrapper.no-js {\n    display: block !important;\n}\n.btn-globo {\n    border-color: #000;\n    background-color: #000;\n    color: #fff !important;\n    padding: 8px 12px;\n    cursor: pointer;\n    line-height: initial;\n    font-size: 13px;\n}\n.product-single__thumbnails.product-single__thumbnails-product-template .slick-list.draggable:not(.slick-vertical .slick-list) {\n    height: auto !important;\n}\n[product-selector] .grid-product__wrapper {\n    margin: 0 !important;\n}\n.featured-collections__item .product-card {\n    display: block;\n}\n.product .item .info .globo-swatch-product-detail label:after {\n    content: \"\";\n}\n.swatches-globo--list {\n    position: relative;\n    z-index: 2;\n}\n.swatches-globo--list .pretty-select {\n    display: none;\n}\n.dropdown-selector {\n    min-height: 40px !important;\n    position: relative;\n}\n.swatches-globo .ul-globo-dropdown-option {\n    width: 100%;\n}\n.globo-swatch-product-detail .ul-globo-dropdown-option,\n.swatches-globo .ul-globo-dropdown-option {\n    position: absolute;\n    border: 1px solid #ccc;\n    flex-direction: column;\n}\n.globo-swatch-product-detail .globo-swatch-list .swatch--gl:nth-child(1) .ul-globo-dropdown-option,\n.swatches-globo .globo-swatch-list .swatch--gl:nth-child(1) .ul-globo-dropdown-option {\n    z-index: 9;\n}\n.globo-swatch-product-detail .globo-swatch-list .swatch--gl:nth-child(2) .ul-globo-dropdown-option,\n.swatches-globo .globo-swatch-list.globo-swatch-list .ul-globo-dropdown-option {\n    z-index: 8;\n}\n.globo-swatch-product-detail .globo-swatch-list .swatch--gl:nth-child(3) .ul-globo-dropdown-option,\n.swatches-globo .globo-swatch-list.globo-swatch-list .swatch--gl:nth-child(3) .ul-globo-dropdown-option {\n    z-index: 7;\n}\n.globo-swatch-product-detail .globo-align-content-left .ul-globo-dropdown-option,\n.swatches-globo .globo-align-content-left .ul-globo-dropdown-option {\n    left: 0;\n}\n.globo-swatch-product-detail .globo-align-content-right .ul-globo-dropdown-option,\n.swatches-globo .globo-align-content-right .ul-globo-dropdown-option {\n    right: 0;\n}\n.globo-swatch-product-detail .globo-align-content-center .ul-globo-dropdown-option,\n.swatches-globo .globo-align-content-center .ul-globo-dropdown-option {\n    left: 0;\n    right: 0;\n    width: fit-content;\n    margin: 0 auto;\n}\n.globo-swatch-product-detail .globo-align-content-center .globo-swatch-list .ul-globo-dropdown-option > li,\n.swatches-globo .globo-align-content-center .ul-globo-dropdown-option > li {\n    margin: 0 auto !important;\n    text-align: left;\n    padding: 0;\n}\n.globo-align-content-left {\n    text-align: left;\n}\n.globo-swatch-product-detail .globo-align-content-left .swatch--gl .ul-globo-dropdown-option li.swatches-options label,\n.swatches-globo .globo-align-content-left .swatch--gl .ul-globo-dropdown-option li.swatches-options label {\n    padding: 8px 40px 8px 10px;\n    font-size: 13px;\n}\n.globo-swatch-product-detail .ul-globo-dropdown-option li.select-option--dropdown.selected .globo-arrow-select {\n    display: block;\n}\n.ul-globo-dropdown-option li.swatches-options:after {\n    content: \"\";\n    display: table;\n    clear: both;\n}\n.globo-align-content-left label.name-option {\n    text-align: left !important;\n}\n.globo-align-content-center label.name-option {\n    text-align: center !important;\n}\nform#product-form #product-variants {\n    display: block !important;\n}\n.collection-main-body .collection-main-body-inner div {\n    margin-bottom: 0;\n}\n.collection-main-body .collection-main-body-inner .swatches-globo--list {\n    margin-bottom: 30px !important;\n}\n.collection__item.product-item .product-item__figure,\n.template-collection .product-item:not(.no_crop_image, .grid__cell, .grid-item-25) {\n    display: block;\n}\n.product-details-wrapper .selector-wrapper {\n    display: block !important;\n}\n.product-details-wrapper .selector-wrapper label {\n    display: block !important;\n    margin-right: 0 !important;\n}\nform.product-menu-form .product-options-container .option {\n    display: none;\n}\nform.product-menu-form .product-menu-slideout-content {\n    padding-top: 10px;\n}\n#bside #product-loop .product-info {\n    bottom: auto;\n    top: 150px;\n}\n.js .product__info .product__form .product__variants .no-js.form__control {\n    display: block !important;\n}\n.no-js.form__control .styled-select {\n    padding: 0 !important;\n}\n.no-js.form__control .styled-select .option-selector__label,\n.no-js.form__control .styled-select select[name=\"id\"],\n.no-js.form__control .styled-select svg {\n    display: none !important;\n}\n.js .product-form .product-options .selector-wrapper.no-js-required {\n    display: block !important;\n}\n.js .product-form .product-options .selector-wrapper.no-js-required .product-select {\n    display: none !important;\n}\n.shopify-product-form .selector-wrapper {\n    display: none;\n}\n.partial--product .details .add-to-cart .globo-swatch-product-detail {\n    padding: 0 15px;\n}\n.shopify-product-form .select {\n    display: block;\n}\n.shopify-product-form .swatch_options {\n    display: none;\n}\n.product-options .inline-field-wrapper {\n    display: none !important;\n}\n.product_section .product_form.is-visible .select {\n    display: block;\n}\n.product_section .product_form.is-visible .swatch_options {\n    display: none;\n}\n.ProductForm__Variants .no-js.ProductForm__Option {\n    display: block !important;\n}\n.ProductForm__Variants .no-js.ProductForm__Option .Select select[name=\"id\"],\n.ProductForm__Variants .no-js.ProductForm__Option .Select svg {\n    display: none;\n}\n.product-form-inner .option-values.option-values-select,\n.product__form .product__variants .form__control,\nform.product_form.product_form_options .swatch_options {\n    display: none;\n}\n#product-description form .select,\nform.product_form.product_form_options .select {\n    display: block;\n}\n.site-box .product--add-to-cart-form.style--minimal li {\n    height: auto;\n    border: 0;\n}\n.site-box .product--add-to-cart-form label:after {\n    content: \"\";\n}\n.collection-listing .product-detail {\n    z-index: 12;\n}\n.product__form .product__variants .form__control.no-js {\n    display: block !important;\n}\n#product-description form .swatch,\nform.product-form.product-form-has-variants .option {\n    display: none;\n}\n.small-item-grid-1.medium-item-grid-1.large-item-grid-2.row-spacing-50 {\n    display: none;\n}\nform#product-form select#product-variants {\n    display: none !important;\n}\n.product-details-wrapper #AddToCartForm .selector-wrapper {\n    display: none !important;\n}\n.globo-border-effects-glow:hover {\n    box-shadow: 0 0 10px 0 #58468c;\n}\n.globo-button-effects-glow:hover {\n    box-shadow: 0 0 10px 0 #58468c;\n}\n.globo-border-effects-shadow:hover {\n    box-shadow: 0 0 8px 1px #58468c;\n}\n.globo-button-effects-shadow:hover {\n    box-shadow: 0 0 8px 1px #58468c;\n}\n.globo-detail-border-effects-glow:hover {\n    box-shadow: 0 0 10px 0 #58468c;\n}\n.globo-detail-button-effects-glow:hover {\n    box-shadow: 0 0 10px 0 #58468c;\n}\n.globo-detail-border-effects-shadow:hover {\n    box-shadow: 0 0 8px 1px #58468c;\n}\n.globo-detail-button-effects-shadow:hover {\n    box-shadow: 0 0 8px 1px #58468c;\n}\n.globo-collection-swatch-price {\n    display: none;\n}\n.glider-contain {\n    width: 100%;\n    margin: 0 auto;\n    position: relative;\n  }\n  .glider {\n    margin: 0 auto;\n    position: relative;\n    overflow-y: hidden;\n    -webkit-overflow-scrolling: touch;\n    -ms-overflow-style: none;\n    transform: translateZ(0);\n  }\n  .glider-track {\n    transform: translateZ(0);\n    width: 100%;\n    margin: 0;\n    padding: 0;\n    display: flex;\n    z-index: 1;\n  }\n  .glider.draggable {\n    user-select: none;\n    cursor: -webkit-grab;\n    cursor: grab;\n  }\n  .glider.draggable .glider-slide img {\n    user-select: none;\n    pointer-events: none;\n  }\n  .glider.drag {\n    cursor: -webkit-grabbing;\n    cursor: grabbing;\n  }\n  .glider-slide {\n    user-select: none;\n    justify-content: center;\n    align-content: center;\n  }\n  .glider-slide img {\n    max-width: 100%;\n  }\n  .glider::-webkit-scrollbar {\n    opacity: 0;\n    height: 0;\n  }\n  .glider-prev,.glider-next {\n    user-select: none;\n    position: absolute;\n    outline: none;\n    background: none;\n    padding: 0;\n    z-index: 2;\n    font-size: 40px;\n    text-decoration: none;\n    left: -23px;\n    border: 0;\n    top: 30%;\n    cursor: pointer;\n    color: #666;\n    opacity: 1;\n    line-height: 1;\n    transition: opacity .5s cubic-bezier(.17,.67,.83,.67),\n                color .5s cubic-bezier(.17,.67,.83,.67);\n  }\n  .glider-prev:hover,\n  .glider-next:hover,\n  .glider-prev:focus,\n  .glider-next:focus {\n    color: #a89cc8;\n  }\n  .glider-next {\n    right: -23px;\n    left: auto;\n  }\n  .glider-next.disabled,\n  .glider-prev.disabled {\n    opacity: .25;\n    color: #666;\n    cursor: default;\n  }\n  .glider-hide {\n    opacity: 0;\n  }\n  .glider-dots {\n    user-select: none;\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n    margin: 0 auto;\n    padding: 0;\n  }\n  .glider-dot {\n    border: 0;\n    padding: 0;\n    user-select: none;\n    outline: none;\n    display: block;\n    cursor: pointer;\n    color: #ccc;\n    border-radius: 999px;\n    background: #ccc;\n    width: 12px;\n    height: 12px;\n    margin: 7px;\n  }\n  .glider-dot:hover,\n  .glider-dot:focus,\n  .glider-dot.active {\n    background: #a89cc8;\n  }\n  @media(max-width: 36em){\n    .glider::-webkit-scrollbar {\n      opacity: 1;\n      -webkit-appearance: none;\n      width: 7px;\n      height: 3px;\n    }\n    .glider::-webkit-scrollbar-thumb {\n      opacity: 1;\n      border-radius: 99px;\n      background-color: rgba(156, 156, 156, 0.25);\n      box-shadow: 0 0 1px rgba(255,255,255,.25);\n    }\n  }\n  .glider-container{\n      display: grid;\n  }\n{%- endstyle -%}\n\n\n<form method=\"post\" action=\"\/cart\/add\" id=\"product-form-installment\" accept-charset=\"UTF-8\"\n  class=\"installment caption-large\" enctype=\"multipart\/form-data\"><input type=\"hidden\" name=\"form_type\"\n    value=\"product\"><input type=\"hidden\" name=\"utf8\" value=\"✓\"><input type=\"hidden\" name=\"id\" value=\"40145188880521\">\n  <div class=\"globo-swatch-product-detail\">\n    <div class=\"globo-align-content-left\">\n      <ul class=\"globo-swatch-detail-lists-price\" style=\"display: none;\">\n        <li data-value=\"40145188880521\"><span class=\"gw-li-price\">€17,90<\/span> <\/li>\n        <li data-value=\"40145188978825\"><span class=\"gw-li-price\">€17,90<\/span> <\/li>\n        <li data-value=\"40145189077129\"><span class=\"gw-li-price\">€17,90<\/span> <\/li>\n        <li data-value=\"40145189011593\"><span class=\"gw-li-price\">€17,90<\/span> <\/li>\n        <li data-value=\"40385951858825\"><span class=\"gw-li-price\">€17,90<\/span> <\/li>\n        <li data-value=\"40385951924361\"><span class=\"gw-li-price\">€17,90<\/span> <\/li>\n        <li data-value=\"40385951957129\"><span class=\"gw-li-price\">€17,90<\/span> <\/li>\n        <li data-value=\"40385951989897\"><span class=\"gw-li-price\">€17,90<\/span> <\/li>\n      <\/ul>\n      <div class=\"globo-swatch-list\">\n        <div class=\"swatch--gl clearfix\" data-option-index=\"0\" data-order=\"2\">\n          <label for=\"pa_Color\" class=\"name-option\" data-name=\"Color\">Color<span class=\"name-variant\"><\/span><\/label>\n          <ul class=\"value g-variant-color-detail\">\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_Negro\" data-value=\"Negro\">\n              <label title=\"Negro\" for=\"swatch-detail-40145188880521-0-Negro\" class=\"swatch-anchor swatch-other\n                        globo-border-color-swatch globo-detail-style-circle globo-detail-size-large globo-detail-border-style-double globo-detail-border-effects-glow globo-detail-hover-size_change-increase\n                        \" style=\"display: block;\n                        background-color: #000000; font-size: 0;\n                        \" data-option-value=\"1\">\n                Negro\n              <\/label>\n            <\/li>\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_Blanco\" data-value=\"Blanco\">\n              <label title=\"Blanco\" for=\"swatch-detail-40145189011593-0-Blanco\" class=\"swatch-anchor swatch-other\n                        globo-border-color-swatch globo-detail-style-circle globo-detail-size-large globo-detail-border-style-double globo-detail-border-effects-glow globo-detail-hover-size_change-increase\n                        \" style=\"display: block;\n                        background-color: #eeeeee; font-size: 0;\n                        \" data-option-value=\"1\">\n                Blanco\n              <\/label>\n            <\/li>\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_Morado\" data-value=\"Morado\">\n              <label title=\"Morado\" for=\"swatch-detail-40385951858825-0-Morado\" class=\"swatch-anchor swatch-other\n                        globo-border-color-swatch globo-detail-style-circle globo-detail-size-large globo-detail-border-style-double globo-detail-border-effects-glow globo-detail-hover-size_change-increase\n                        \" style=\"display: block;\n                        background-color: #3a2d4b; font-size: 0;\n                        \" data-option-value=\"1\">\n                Morado\n              <\/label>\n            <\/li>\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_Azul\" data-value=\"Azul\">\n              <label title=\"Azul\" for=\"swatch-detail-40385951924361-0-Azul\" class=\"swatch-anchor swatch-other\n                        globo-border-color-swatch globo-detail-style-circle globo-detail-size-large globo-detail-border-style-double globo-detail-border-effects-glow globo-detail-hover-size_change-increase\n                        \" style=\"display: block;\n                        background-color: #5593d0; font-size: 0;\n                        \" data-option-value=\"1\">\n                Azul\n              <\/label>\n            <\/li>\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_Amarillo\"\n              data-value=\"Amarillo\">\n              <label title=\"Amarillo\" for=\"swatch-detail-40385951957129-0-Amarillo\" class=\"swatch-anchor swatch-other\n                        globo-border-color-swatch globo-detail-style-circle globo-detail-size-large globo-detail-border-style-double globo-detail-border-effects-glow globo-detail-hover-size_change-increase\n                        \" style=\"display: block;\n                        background-color: #e8c543; font-size: 0;\n                        \" data-option-value=\"1\">\n                Amarillo\n              <\/label>\n            <\/li>\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_Rosa\" data-value=\"Rosa\">\n              <label title=\"Rosa\" for=\"swatch-detail-40385951989897-0-Rosa\" class=\"swatch-anchor swatch-other\n                        globo-border-color-swatch globo-detail-style-circle globo-detail-size-large globo-detail-border-style-double globo-detail-border-effects-glow globo-detail-hover-size_change-increase\n                        \" style=\"display: block;\n                        background-color: #e1b6d4; font-size: 0;\n                        \" data-option-value=\"1\">\n                Rosa\n              <\/label>\n            <\/li>\n          <\/ul>\n          <div class=\"errorOptions\" data-nameinput=\"option-globo-0\"><\/div>\n        <\/div>\n        <div class=\"swatch--gl clearfix\" data-option-index=\"1\" data-order=\"3\">\n          <label for=\"pa_Tamaño\" class=\"name-option\" data-name=\"Tamaño\">Tamaño<span class=\"name-variant\"><\/span><\/label>\n          <ul class=\"value\">\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_M\" data-value=\"M\">\n              <label title=\"M\" for=\"swatch-detail-40145188978825-1-M\"\n                class=\"swatch-anchor swatch-other globo-style--button globo-detail-button-style-rounded globo-detail-button-size-large globo-detail-text-style-uppercase \">\n                M\n              <\/label>\n            <\/li>\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_L\" data-value=\"L\">\n              <label title=\"L\" for=\"swatch-detail-40145189077129-1-L\"\n                class=\"swatch-anchor swatch-other globo-style--button globo-detail-button-style-rounded globo-detail-button-size-large globo-detail-text-style-uppercase \">\n                L\n              <\/label>\n            <\/li>\n            <li class=\"select-option globo-sold-out-cross-out available\" data-attribute=\"pa_S\" data-value=\"S\">\n              <label title=\"S\" for=\"swatch-detail-40145188880521-1-S\"\n                class=\"swatch-anchor swatch-other globo-style--button globo-detail-button-style-rounded globo-detail-button-size-large globo-detail-text-style-uppercase \">\n                S\n              <\/label>\n            <\/li>\n          <\/ul>\n          <div class=\"errorOptions\" data-nameinput=\"option-globo-1\"><\/div>\n        <\/div>\n      <\/div>\n      <div class=\"globo-number-stock-variant\"><\/div>\n    <\/div>\n  <\/div>\n<\/form>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "e78965eb-a945-4fda-b289-593e3a7566a5": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>\n{%- assign current_variant = product.selected_or_first_available_variant -%}\nCódigo de artículo: {{ current_variant.sku }}"
+          }
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Materials",
+            "icon": "leather",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Shipping & Returns",
+            "icon": "truck",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Dimensions",
+            "icon": "ruler",
+            "content": "",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "disabled": true,
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "heart",
+            "content": "",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "caption",
+        "price",
+        "d1d4362d-b973-42bd-80f3-23fe32d5fcc5",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "e78965eb-a945-4fda-b289-593e3a7566a5",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "collapsible-row-3",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "small",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "disabled": true,
+      "blocks": {
+        "image-with-text-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "image-with-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "image-with-text-0",
+        "image-with-text-1"
+      ],
+      "settings": {
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "disabled": true,
+      "blocks": {
+        "column-0": {
+          "type": "column",
+          "settings": {
+            "title": "Free Shipping",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "title": "Hassle-Free Exchanges",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column-0",
+        "column-1"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "Productos similares",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image-with-text",
+    "multicolumn",
+    "product-recommendations"
+  ]
+}
