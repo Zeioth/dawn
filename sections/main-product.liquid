@@ -44,12 +44,13 @@ function gads_report_add_to_cart(url) {
   {% include 'teeinblue-scripts' %}
   {% if product.title == "Crear camiseta personalizada" %}
     {% include 'teeinblue-product-loader' %}
-  {% endif %}
-  
   {% style %}
     .tee-option__title {visibility: hidden;}
     .tee-option__title::before {content: "Orientación";visibility: visible;}
   {% endstyle %}
+  {% endif %}
+  
+
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
   {%- if first_3d_model -%}
