@@ -63,7 +63,7 @@ function gads_report_add_to_cart(url) {
 
         const teePhoto = document.getElementsByClassName("tee-photo");
         const wrapper = document.createElement('label');
-        wrapper.for = 'tee-photo-layer-129732';
+        wrapper.setAttribute("for", "tee-photo-layer-129732");
         for (let i = 0; i < teePhoto.length; i++) {
             teePhoto[i].prepend(wrapper);
         }
