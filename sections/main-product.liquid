@@ -50,8 +50,13 @@ function gads_report_add_to_cart(url) {
       .money {font-size: 2em;}
     {% endstyle %}
     <script>
-      var element = document.getElementById('tee-photo-layer-598010');
-      element.dispatchEvent(new Event('input', {bubbles:true}));
+      var fileControl = document.getElementById('tee-photo-layer-598010');
+      var fileArea = document.getElementByClassName('tee-photo-image');
+      
+      fileArea.addEventListener("click", {
+        fileControl.dispatchEvent(new Event('input', {bubbles:true}));
+      });
+      
     </script>
   {% endif %}
   
