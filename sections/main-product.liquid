@@ -45,8 +45,8 @@ function gads_report_add_to_cart(url) {
   {% if product.title == "Crear camiseta personalizada" %}
     {% include 'teeinblue-product-loader' %}
   {% style %}
-    tee-available-products > .tee-option__title {visibility: hidden;}
-    tee-available-products > .tee-option__title::before {content: "Orientación";visibility: visible;}
+    tee-available-products .tee-option__title {visibility: hidden;}
+    tee-available-products .tee-option__title::before {content: "Orientación";visibility: visible;}
   {% endstyle %}
   {% endif %}
   
