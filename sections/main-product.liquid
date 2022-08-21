@@ -51,12 +51,12 @@ function gads_report_add_to_cart(url) {
     {% endstyle %}
     <script>
       window.addEventListener('load', function() {
-        var element = document.getElementById('tee-photo-layer-598010');
+        var elemento = document.getElementById('tee-photo-layer-598010');
         const collection = document.getElementsByClassName("tee-photo-placeholder");
         for (let i = 0; i < collection.length; i++) {
-            collection[i].onclick = function(){
+            collection[i].onclick = function(elemento){
               alert("ok");
-              element.dispatchEvent(new Event('input', {bubbles:true}));
+              elemento.dispatchEvent(new Event('input', {bubbles:true}));
           };
         }
       })
