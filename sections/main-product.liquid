@@ -48,7 +48,7 @@ function gads_report_add_to_cart(url) {
   
   {% style %}
     .tee-option__title {    visibility: hidden;}
-    .tee-option__title::after {content: "Oriencación";}
+    .tee-option__title::before {content: "Oriencación";}
   {% endstyle %}
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
