@@ -54,7 +54,8 @@ function gads_report_add_to_cart(url) {
         var element = document.getElementById('tee-photo-layer-598010');
         const collection = document.getElementsByClassName("tee-photo-placeholder");
         for (let i = 0; i < collection.length; i++) {
-            element.dispatchEvent(new Event('input', {bubbles:true}));
+            collection[i].onclick = function(){
+              element.dispatchEvent(new Event('input', {bubbles:true}));
           };
         }
       })
