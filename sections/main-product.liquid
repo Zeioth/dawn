@@ -52,11 +52,11 @@ function gads_report_add_to_cart(url) {
     <script>
       var fileControl = document.getElementById('tee-photo-layer-598010');
       var fileArea = document.getElementsByClassName('tee-photo-placeholder');
-      
-      fileArea.onclick = function(){
-        fileControl.dispatchEvent(new Event('input', {bubbles:true}));
-      }; 
-      
+      for (let i = 0; i < collection.length; i++) {
+        fileArea[i].onclick = function(){
+          fileControl.dispatchEvent(new Event('input', {bubbles:true}));
+        }; 
+       };
     </script>
   {% endif %}
   
