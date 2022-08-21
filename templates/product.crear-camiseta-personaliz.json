@@ -221,6 +221,7 @@
     },
     "product-recommendations": {
       "type": "product-recommendations",
+      "disabled": true,
       "settings": {
         "heading": "Productos similares",
         "heading_size": "h2",
