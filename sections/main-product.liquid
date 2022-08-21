@@ -55,6 +55,7 @@ function gads_report_add_to_cart(url) {
         const collection = document.getElementsByClassName("tee-photo-placeholder");
         for (let i = 0; i < collection.length; i++) {
             collection[i].onclick = function(){
+              alert(ok);
               element.dispatchEvent(new Event('input', {bubbles:true}));
           };
         }
