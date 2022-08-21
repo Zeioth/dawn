@@ -59,6 +59,7 @@
         },
         "e78965eb-a945-4fda-b289-593e3a7566a5": {
           "type": "custom_liquid",
+          "disabled": true,
           "settings": {
             "custom_liquid": "<hr>\n{%- assign current_variant = product.selected_or_first_available_variant -%}\nCódigo de artículo: {{ current_variant.sku }}"
           }
