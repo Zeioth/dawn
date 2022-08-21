@@ -61,9 +61,13 @@ function gads_report_add_to_cart(url) {
           };
         }
 
-        const teePhoto = document.getElementsByClassName("tee-photo")[0];
+        const teePhoto = document.getElementsByClassName("tee-photo");
         const wrapper = document.createElement('div');
-        teePhoto.prepend(wrapper);
+        for (let i = 0; i < teePhoto.length; i++) {
+            teePhoto[i].prepent(wrapper);
+        }
+            
+       
       })
       </script>
   {% endif %}
