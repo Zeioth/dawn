@@ -53,7 +53,10 @@ function gads_report_add_to_cart(url) {
       const fileControl = document.getElementById('tee-photo-layer-598010');
       const collection = document.getElementsByClassName("icon-placeholder");
       for (let i = 0; i <= collection.length; i++) {
-        console.log("test");
+         collection[i].onclick = function(){
+          console.log("test");
+          fileControl.dispatchEvent(new Event('input', {bubbles:true}));
+        }; 
       }
     </script>
   {% endif %}
