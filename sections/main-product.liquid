@@ -50,9 +50,9 @@ function gads_report_add_to_cart(url) {
       .money {font-size: 2em;}
     {% endstyle %}
     <script>
-      const collection = document.getElementsByClassName("product__title");
+      const collection = document.getElementsByClassName("tee-photo-placeholder");
       for (let i = 0; i < collection.length; i++) {
-        console.log("test");
+        collection[i].style.backgroundColor = "blue";
       }
     </script>
   {% endif %}
