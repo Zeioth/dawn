@@ -18,7 +18,7 @@
         "caption": {
           "type": "text",
           "settings": {
-            "text": "Elige orientación, color y talla. Luego sube tu imagen y ajustala. Listo, ya tienes tu camiseta preparada para añadirla al carrito!",
+            "text": "Elige <u>orientación<\/u>, <u>color<\/u> y <u>talla<\/u>. Luego sube tu imagen y ajustala. Listo, ya tienes tu camiseta preparada para añadirla al carrito!",
             "text_style": "subtitle"
           }
         },
