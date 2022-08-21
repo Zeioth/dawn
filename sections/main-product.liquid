@@ -46,9 +46,9 @@ function gads_report_add_to_cart(url) {
     {% include 'teeinblue-product-loader' %}
   {% endif %}
   
-  <style>
+  {% style %}
     .tee-option__title {content: 'Orentación';}
-  </style>
+  {% endstyle %}
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
   {%- if first_3d_model -%}
