@@ -146,7 +146,7 @@
         "image_available": "La imagen {{ index }} ya está disponible en la vista de la galería"
       },
       "view_full_details": "Ver todos los detalles",
-      "include_taxes": "IVA incluido.",
+      "include_taxes": "",
       "shipping_policy_html": "<a href=\"{{ link }}\">Gastos de envío<\/a> gratuitos al pedir 2 productos. OFERTA: Descuento del 15%  al pedir 3.",
       "choose_options": "Seleccionar opciones",
       "choose_product_options": "Elegir opciones para {{ product_name }}"
