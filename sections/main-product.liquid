@@ -51,6 +51,7 @@ function gads_report_add_to_cart(url) {
     {% endstyle %}
     <script>
       window.addEventListener('load', function() {
+        // Create a wrapper to contain the new tree
         const teePhoto = document.getElementsByClassName("tee-photo");
         const wrapper = document.createElement('label');
         wrapper.setAttribute("for", "tee-photo-layer-129732");
@@ -61,7 +62,7 @@ function gads_report_add_to_cart(url) {
         const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
         for (let i = 0; i < teePhoto.length; i++) {
           wrapper.prepend(teePhotoPlaceholder[i]);
-          teePhotoPlaceholder[i].remove();
+          teePhotoPlaceholder[i].style.display = 'none';
         }
       })
       </script>
