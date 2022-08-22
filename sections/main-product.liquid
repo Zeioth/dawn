@@ -59,12 +59,12 @@ function gads_report_add_to_cart(url) {
 
         // Get tee-photo-placeholder and make it children of wrapper
         const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
-
-          if(teePhotoPlaceholder[1]){
-            wrapper.prepend(teePhotoPlaceholder[1]);
-            teePhotoPlaceholder[0].remove();
+        for (let i = 0; i < teePhoto.length; i++) {
+          if(teePhotoPlaceholder[i]){
+            wrapper.prepend(teePhotoPlaceholder[i]);
+            teePhotoPlaceholder[i].style.display = 'none';
           }
-        
+        }
 
 
         const teeRadio = document.getElementsByClassName("tee-radio");
