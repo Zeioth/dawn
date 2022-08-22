@@ -103,18 +103,7 @@ function gads_report_add_to_cart(url) {
           const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
           for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
             
-          // Also make it clickable after choosing orientation
-          teeRadio[0].addEventListener("click", function() {
-            setTimeout(function(){make_image_field_clickable();}, 1000);
-          });
-          teeRadio[1].addEventListener("click", function() {
-            setTimeout(function(){make_image_field_clickable();}, 1000);
-          });
 
-          // Also add click event handler to the image field
-          wrapper.addEventListener("click", function() {
-            gtag_report_user_uploads_image();
-          });
        } // END OF make_image_field_clickable()
 
         // START - Call method on page load
