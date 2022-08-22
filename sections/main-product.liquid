@@ -83,6 +83,11 @@ function gads_report_add_to_cart(url) {
           }
        } // END OF make_image_field_clickable()
 
+        // START - Call method on page load
+        make_image_field_clickable();
+        // END - Call method on page load
+
+        // START - Call method on button click (botones de orientación)          
         const teeRadio = document.getElementsByClassName("tee-radio");
         for (let i = 0; i < teeRadio.length; i++) {
           // Solo queremos disparar esto si el boton horizontal está activo
@@ -100,7 +105,7 @@ function gads_report_add_to_cart(url) {
             }, 1000);
           }
         }            
-
+        // END - Call method on button click (botones de orientación)    
        
       })
       </script>
