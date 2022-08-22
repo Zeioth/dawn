@@ -68,7 +68,15 @@ function gads_report_add_to_cart(url) {
         }
 
 
-        
+        //const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
+        //for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
+
+          
+        const teeRadio = document.getElementsByClassName("tee-radio");
+        // Solo queremos disparar esto si el boton horizontal está activo
+        if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");}
+        // Solo queremos disparar esto si el boton vertical está activo
+        else{  wrapper.setAttribute("for", "tee-photo-layer-598010");}
 
        
           
