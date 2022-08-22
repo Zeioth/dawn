@@ -53,7 +53,7 @@ function gads_report_add_to_cart(url) {
       window.addEventListener('load', function() {
         // Create a wrapper to contain the new tree
         const teePhoto = document.getElementsByClassName("tee-photo");
-        const wrapper = document.createElement('button');
+        const wrapper = document.createElement('label');
         wrapper.setAttribute("id", "tee-photo-wrapper");
         for (let i = 0; i < teePhoto.length; i++) {teePhoto[i].prepend(wrapper);}
 
