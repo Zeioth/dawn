@@ -78,6 +78,14 @@ function gads_report_add_to_cart(url) {
         // Solo queremos disparar esto si el boton vertical está activo
         else{  wrapper.setAttribute("for", "tee-photo-layer-598010");}
 
+
+        // Apply even listener to the buttons
+        const orientationButtons = document.getElementsByClassName('.tee-available-products > div:nth-child(2)');
+        for (let i = 0; i < orientationButtons.length; i++) {
+
+          // Podemos añadir el evento aqui pero primero probamos
+          console.log(orientationButtons[i]);
+        }
        
           
 
