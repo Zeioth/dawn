@@ -13,6 +13,26 @@ function gads_report_add_to_cart(url) {
   });
   return false;
 }
+
+
+</script>
+<!-- END -->
+
+<!-- hack GOOGLE ADS: al llamar esta función en un onclick, registra un evento en gads en la conversion que tenga el valor de 'send_to' -->
+<!-- Está conversión está configurada para ser detectada varias veces por visitante por GADS. -->
+<script>
+  function gtag_report_user_uploads_image(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'user_uploads_image', {
+        'send_to': 'AW-10906879768/s1pXCOSzkNgDEJiO59Ao',
+        'event_callback': callback
+    });
+    return false;
+  }
 </script>
 <!-- END -->
 
@@ -52,20 +72,6 @@ function gads_report_add_to_cart(url) {
     <script>
       window.addEventListener('load', function() {
 
-        // Google Ads conversion to the upload image button
-        function gtag_report_user_uploads_image(url) {
-          var callback = function () {
-            if (typeof(url) != 'undefined') {
-              window.location = url;
-            }
-          };
-          gtag('event', 'user_uploads_image', {
-              'send_to': 'AW-10906879768/s1pXCOSzkNgDEJiO59Ao',
-              'event_callback': callback
-          });
-          return false;
-        }
-
         // Custom function
         function make_image_field_clickable(){
           // Create a wrapper to contain the new tree
@@ -103,7 +109,12 @@ function gads_report_add_to_cart(url) {
           });
           teeRadio[1].addEventListener("click", function() {
             setTimeout(function(){make_image_field_clickable();}, 1000);
-          });            
+          });
+
+          // Also add click event handler to the image field
+          wrapper.addEventListener("click", function() {
+            gtag_report_user_uploads_image();
+          });
        } // END OF make_image_field_clickable()
 
         // START - Call method on page load
