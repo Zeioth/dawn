@@ -67,9 +67,11 @@ function gads_report_add_to_cart(url) {
         }
 
 
-
-        wrapper.setAttribute("for", "tee-photo-layer-598010");
-
+        const teeRadio = document.getElementsByClassName("tee-radio");
+        for (let i = 0; i < teeRadio.length; i++) {
+            wrapper.setAttribute("for", "tee-photo-layer-129732");
+            wrapper.setAttribute("for", "tee-photo-layer-598010");
+        }
           
        // Solo queremos disparar esto si el boton horizontal está activo
        
