@@ -79,7 +79,9 @@ function gads_report_add_to_cart(url) {
         else{  wrapper.setAttribute("for", "tee-photo-layer-598010");}
 
 
-
+        // Apply even listener to the buttons
+        const teeUploadedPhoto = document.getElementsByClassName('.tee-available-products > div:nth-child(2)');
+        for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
        
           
 
