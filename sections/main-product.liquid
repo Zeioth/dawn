@@ -67,11 +67,20 @@ function gads_report_add_to_cart(url) {
           }
         }
 
-
+        // Aplicalo también una vez la imagen se haya subido
         const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
         for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
 
           
+        const teeRadio = document.getElementsByClassName("tee-radio");
+        for (let i = 0; i < teePhoto.length; i++) {
+          // Solo queremos disparar esto si el boton horizontal está activo
+          if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");});
+          }
+          // Solo queremos disparar esto si el boton vertical está activo
+          else{wrapper.setAttribute("for", "tee-photo-layer-598010");}
+        }
+
         const teeRadio = document.getElementsByClassName("tee-radio");
         for (let i = 0; i < teePhoto.length; i++) {
           // Solo queremos disparar esto si el boton horizontal está activo
@@ -82,21 +91,7 @@ function gads_report_add_to_cart(url) {
             teeRadio[1].addEventListener("click", function() { 
             // Espera 1 sec y carga la funcion
             setTimeout(function(){
-        // Create a wrapper to contain the new tree
-        const teePhoto = document.getElementsByClassName("tee-photo");
-        const wrapper = document.createElement('label');
-        wrapper.setAttribute("id", "tee-photo-wrapper");
-        wrapper.style.display = 'flex'; // Hace clickable todo el wrapper
-        for (let i = 0; i < teePhoto.length; i++) {teePhoto[i].prepend(wrapper);}
-
-        // Get tee-photo-placeholder and make it children of wrapper
-        const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
-        for (let i = 0; i < teePhoto.length; i++) {
-          if(teePhotoPlaceholder[i]){
-            wrapper.prepend(teePhotoPlaceholder[i]);
-            teePhotoPlaceholder[i].style.display = 'none';
-          }
-        }
+                console.log("Executed after 1 second");
             }, 3000);
             
             });
