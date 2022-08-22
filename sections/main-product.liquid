@@ -73,10 +73,12 @@ function gads_report_add_to_cart(url) {
 
           
         const teeRadio = document.getElementsByClassName("tee-radio");
-        // Solo queremos disparar esto si el boton horizontal está activo
-        if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");}
-        // Solo queremos disparar esto si el boton vertical está activo
-        else{  wrapper.setAttribute("for", "tee-photo-layer-598010");}
+        if(teeRadio){
+          // Solo queremos disparar esto si el boton horizontal está activo
+          if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");}
+          // Solo queremos disparar esto si el boton vertical está activo
+          else{  wrapper.setAttribute("for", "tee-photo-layer-598010");}
+        }
 
        
           
