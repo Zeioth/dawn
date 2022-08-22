@@ -59,9 +59,9 @@ function gads_report_add_to_cart(url) {
 
         // Get tee-photo-placeholder and make it children of wrapper
         const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
-        for (let i = 0; i < 1; i++) {
+        for (let i = 0; i < teePhoto.length; i++) {
           if(teePhotoPlaceholder[i]){
-            wrapper.prepend(teePhotoPlaceholder[i]);
+            wrapper.prepend(teePhotoPlaceholder[0]);
             teePhotoPlaceholder[i].style.display = 'none';
           }
         }
