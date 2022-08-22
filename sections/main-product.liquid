@@ -80,7 +80,10 @@ function gads_report_add_to_cart(url) {
             
             // Añadele un event handler para que al hacerle click al boton, se ejecute todo este codigo (metelo en un metodo)
             teeRadio[1].addEventListener("click", function() { 
-              alert('test'); 
+              window.setTimeout(() => {
+                  alert('test'); 
+              }, 2000);
+            
             });
           }
           // Solo queremos disparar esto si el boton vertical está activo
