@@ -75,13 +75,13 @@ function gads_report_add_to_cart(url) {
         
         const teeRadio = document.getElementsByClassName("tee-radio");
         for (let i = 0; i < teeRadio.length; i++) {
-          // Solo queremos disparar esto si el boton horizontal está activo
+          
+          // Si pulsamos el boton derecho
           if(teeRadio[0].classList.contains('active')){
-            wrapper.setAttribute("for", "tee-photo-layer-129732");
-            
+          
             // Añadele un event handler para que al hacerle click al boton, se ejecute todo este codigo (metelo en un metodo)
             teeRadio[1].addEventListener("click", function() { 
-            // Espera 1 sec y carga la funcion
+            // Espera 3 sec y carga la funcion
             setTimeout(function(){
                 console.log("Executed after 3 second");
                 make_imge_field_clickable();
@@ -89,9 +89,13 @@ function gads_report_add_to_cart(url) {
             
             });
           }
-          // Solo queremos disparar esto si el boton vertical está activo
-          else{
-            wrapper.setAttribute("for", "tee-photo-layer-598010");
+          // Si pulsamos el boton izquierdo
+          if(teeRadio[1].classList.contains('active')){
+            // Espera 3 sec y carga la funcion
+            setTimeout(function(){
+                console.log("Executed after 3 second");
+                make_imge_field_clickable();
+            }, 3000);
           }
         }
        
