@@ -52,6 +52,21 @@ function gads_report_add_to_cart(url) {
     <script>
       window.addEventListener('load', function() {
 
+        // Google Ads conversion to the upload image button
+        function gtag_report_user_uploads_image(url) {
+          var callback = function () {
+            if (typeof(url) != 'undefined') {
+              window.location = url;
+            }
+          };
+          gtag('event', 'user_uploads_image', {
+              'send_to': 'AW-10906879768/s1pXCOSzkNgDEJiO59Ao',
+              'event_callback': callback
+          });
+          return false;
+        }
+
+        // Custom function
         function make_image_field_clickable(){
           // Create a wrapper to contain the new tree
           const teePhoto = document.getElementsByClassName("tee-photo");
@@ -94,8 +109,7 @@ function gads_report_add_to_cart(url) {
         // START - Call method on page load
         make_image_field_clickable();
         // END - Call method on page load
- 
-       
+
       })
       </script>
   {% endif %}
