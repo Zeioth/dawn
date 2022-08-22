@@ -103,6 +103,15 @@ function gads_report_add_to_cart(url) {
           const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
           for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
             
+          // Also make it clickable after choosing orientation
+          console.log(teeRadio[0]);
+          teeRadio[0].addEventListener("click", function() {
+            setTimeout(function(){make_image_field_clickable();}, 1000);
+          });
+          console.log(teeRadio[1]);
+          teeRadio[1].addEventListener("click", function() {
+            setTimeout(function(){make_image_field_clickable();}, 1000);
+          });
 
        } // END OF make_image_field_clickable()
 
