@@ -51,36 +51,38 @@ function gads_report_add_to_cart(url) {
     {% endstyle %}
     <script>
       window.addEventListener('load', function() {
-        // Create a wrapper to contain the new tree
-        const teePhoto = document.getElementsByClassName("tee-photo");
-        const wrapper = document.createElement('label');
-        wrapper.setAttribute("id", "tee-photo-wrapper");
-        wrapper.style.display = 'flex'; // Hace clickable todo el wrapper
-        for (let i = 0; i < teePhoto.length; i++) {teePhoto[i].prepend(wrapper);}
 
-        // Get tee-photo-placeholder and make it children of wrapper
-        const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
-        for (let i = 0; i < teePhoto.length; i++) {
-          if(teePhotoPlaceholder[i]){
-            wrapper.prepend(teePhotoPlaceholder[i]);
-            teePhotoPlaceholder[i].style.display = 'none';
+        function make_image_field_clickable(){
+          // Create a wrapper to contain the new tree
+          const teePhoto = document.getElementsByClassName("tee-photo");
+          const wrapper = document.createElement('label');
+          wrapper.setAttribute("id", "tee-photo-wrapper");
+          wrapper.style.display = 'flex'; // Hace clickable todo el wrapper
+          for (let i = 0; i < teePhoto.length; i++) {teePhoto[i].prepend(wrapper);}
+  
+          // Get tee-photo-placeholder and make it children of wrapper
+          const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
+          for (let i = 0; i < teePhoto.length; i++) {
+            if(teePhotoPlaceholder[i]){
+              wrapper.prepend(teePhotoPlaceholder[i]);
+              teePhotoPlaceholder[i].style.display = 'none';
+            }
           }
-        }
-
-
-        const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
-        for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
-
-          
-        const teeRadio = document.getElementsByClassName("tee-radio");
-        for (let i = 0; i < teeRadio.length; i++) {
-          console.log(teeRadio[i]);
-          // Solo queremos disparar esto si el boton horizontal está activo
-          if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");}
-          // Solo queremos disparar esto si el boton vertical está activo
-          if(teeRadio[1].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-598010");}
-        }
-       
+  
+  
+          const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
+          for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
+  
+            
+          const teeRadio = document.getElementsByClassName("tee-radio");
+          for (let i = 0; i < teeRadio.length; i++) {
+            console.log(teeRadio[i]);
+            // Solo queremos disparar esto si el boton horizontal está activo
+            if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");}
+            // Solo queremos disparar esto si el boton vertical está activo
+            if(teeRadio[1].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-598010");}
+          }
+       }
        
       })
       </script>
