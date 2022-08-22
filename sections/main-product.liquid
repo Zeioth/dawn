@@ -79,7 +79,9 @@ function gads_report_add_to_cart(url) {
             teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");
             
             // Añadele un event handler para que al hacerle click al boton, se ejecute todo este codigo (metelo en un metodo)
-            // teeRadio[1]
+            teeRadio[1].addEventListener("click", function() { 
+              alert('test'); 
+            });
           }
           // Solo queremos disparar esto si el boton vertical está activo
           else{
