@@ -69,11 +69,7 @@ function gads_report_add_to_cart(url) {
             }
           }
   
-  
-          const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
-          for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
-  
-            
+          // Make it clickable no matter what orientation is selected when the page is loaded
           const teeRadio = document.getElementsByClassName("tee-radio");
           for (let i = 0; i < teeRadio.length; i++) {
             // Solo queremos disparar esto si el boton horizontal está activo
@@ -82,17 +78,16 @@ function gads_report_add_to_cart(url) {
             if(teeRadio[1].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-598010");}
           }
 
+          // Also make it clickable after a photo has been already uploaded
+          const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
+          for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
+            
+          // Also make it clickable after choosing orientation
           teeRadio[0].addEventListener("click", function() {
-            setTimeout(function(){
-              console.log("Executed after 2 second");
-              make_image_field_clickable();
-            }, 1000);
+            setTimeout(function(){make_image_field_clickable();}, 1000);
           });
           teeRadio[1].addEventListener("click", function() {
-            setTimeout(function(){
-              console.log("Executed after 2 second");
-              make_image_field_clickable();
-            }, 1000);
+            setTimeout(function(){make_image_field_clickable();}, 1000);
           });            
        } // END OF make_image_field_clickable()
 
