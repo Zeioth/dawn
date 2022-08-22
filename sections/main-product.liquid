@@ -94,18 +94,18 @@ function gads_report_add_to_cart(url) {
           if(teeRadio[0].classList.contains('active')){
             teeRadio[1].addEventListener("click", function() {
               setTimeout(function(){
-                console.log("Executed after 3 second");
+                console.log("Executed after 2 second");
                 make_image_field_clickable();
-              }, 3000);
+              }, 2000);
             });
           }
           // Solo queremos disparar esto si el boton vertical está activo
           if(teeRadio[1].classList.contains('active')){
             teeRadio[0].addEventListener("click", function() {
               setTimeout(function(){
-                console.log("Executed after 3 second");
+                console.log("Executed after 2 second");
                 make_image_field_clickable();
-              }, 3000);
+              }, 2000);
             });
           }
         }            
