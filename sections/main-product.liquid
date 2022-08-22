@@ -84,19 +84,22 @@ function gads_report_add_to_cart(url) {
               // Espera 3 sec y carga la funcion
               setTimeout(function(){
                   console.log("Executed after 3 second");
-                  make_imge_field_clickable();
               }, 3000);
             
             });
           }
           // Si pulsamos el boton izquierdo
           if(teeRadio[1].classList.contains('active')){
-            // Espera 3 sec y carga la funcion
-            setTimeout(function(){
-                console.log("Executed after 3 second");
-                make_imge_field_clickable();
-            }, 3000);
+
+            // Añadele un event handler para que al hacerle click al boton, se ejecute todo este codigo (metelo en un metodo)
+            teeRadio[0].addEventListener("click", function() { 
+              // Espera 3 sec y carga la funcion
+              setTimeout(function(){
+                  console.log("Executed after 3 second");
+              }, 3000);
+    
           }
+            
         }
        
        
