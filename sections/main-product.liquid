@@ -78,29 +78,27 @@ function gads_report_add_to_cart(url) {
           if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");});
           }
           // Solo queremos disparar esto si el boton vertical está activo
-          else{wrapper.setAttribute("for", "tee-photo-layer-598010");}
+          if(teeRadio[1].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-598010");}
         }
+
+
 
         const teeRadio = document.getElementsByClassName("tee-radio");
         for (let i = 0; i < teePhoto.length; i++) {
           // Solo queremos disparar esto si el boton horizontal está activo
-          if(
-            teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");
-            
-            // Añadele un event handler para que al hacerle click al boton, se ejecute todo este codigo (metelo en un metodo)
-            teeRadio[1].addEventListener("click", function() { 
-            // Espera 1 sec y carga la funcion
-            setTimeout(function(){
-                console.log("Executed after 1 second");
-            }, 3000);
-            
-            });
+          if(teeRadio[0].classList.contains('active')){
+            setTimeout(function(){console.log("Executed after 1 second");}, 3000);
+    
+          });
           }
           // Solo queremos disparar esto si el boton vertical está activo
-          else{
-            wrapper.setAttribute("for", "tee-photo-layer-598010");
+          if(teeRadio[1].classList.contains('active')){
+            setTimeout(function(){console.log("Executed after 1 second");}, 3000);
+    
           }
         }
+          
+
        
        
       })
