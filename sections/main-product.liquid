@@ -90,7 +90,7 @@ function gads_report_add_to_cart(url) {
         // START - Call method on button click (botones de orientación)          
         const teeRadio = document.getElementsByClassName("tee-radio");
         for (let i = 0; i < teeRadio.length; i++) {
-          conslole.log(teeRadio[i]);
+          console.log(teeRadio[i]);
           // Solo queremos disparar esto si el boton horizontal está activo
           if(teeRadio[0].classList.contains('active')){
             teeRadio[1].addEventListener("click", function() {
