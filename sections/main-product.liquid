@@ -81,7 +81,12 @@ function gads_report_add_to_cart(url) {
         }
        
           
-
+        const teeButtons = document.getElementsByClassName("tee-radio");
+        for (let i = 0; i < teeButtons.length; i++) {
+          if(teeButtons[i]){
+            console.log(teeButtons[i]);
+          }
+        }
        
        
       })
