@@ -101,12 +101,8 @@ function gads_report_add_to_cart(url) {
           }
           // Solo queremos disparar esto si el boton vertical está activo
           if(teeRadio[1].classList.contains('active')){
-            teeRadio[0].addEventListener("click", function() {
-              setTimeout(function(){
-                console.log("Executed after 3 second");
-                make_image_field_clickable();
-              }, 3000);
-            });
+
+          
           }
         }            
         // END - Call method on button click (botones de orientación)    
