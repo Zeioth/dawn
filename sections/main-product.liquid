@@ -70,16 +70,17 @@ function gads_report_add_to_cart(url) {
         const teeRadio = document.getElementsByClassName("tee-radio");
         for (let i = 0; i < teeRadio.length; i++) {
           if(teeRadio[i].classList.contains(active)){
+            // Solo queremos disparar esto si el boton horizontal está activo
             wrapper.setAttribute("for", "tee-photo-layer-129732");
           }
           else{
+            // Solo queremos disparar esto si el boton vertical está activo
             wrapper.setAttribute("for", "tee-photo-layer-598010");
         }
           
-       // Solo queremos disparar esto si el boton horizontal está activo
        
           
-       // Solo queremos disparar esto si el boton vertical está activo
+
        
        
       })
