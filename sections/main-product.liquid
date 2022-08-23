@@ -78,7 +78,8 @@ function gads_report_add_to_cart(url) {
           const teePhoto = document.getElementsByClassName("tee-photo");
           const wrapper = document.createElement('label');
           wrapper.setAttribute("id", "tee-photo-wrapper");
-          wrapper.style.display = 'flex'; // Hace clickable todo el wrapper
+          wrapper.style.display = 'flex'; // Hace clickable todo el wrapper.
+          wrapper.style.cursor = 'copy'; // Hace que el cursor muestre que es clickable.
           for (let i = 0; i < teePhoto.length; i++) {teePhoto[i].prepend(wrapper);}
   
           // Get tee-photo-placeholder and make it children of wrapper
