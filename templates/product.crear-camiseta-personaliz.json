@@ -18,7 +18,7 @@
         "caption": {
           "type": "text",
           "settings": {
-            "text": "Elige orientación, color y talla. Luego sube tu imagen y ajustala. Listo! Ya es tuya!",
+            "text": "Elige <u>orientación<\/u>, <u>color<\/u> y <u>talla<\/u>. Luego sube tu imagen y ajustala. Listo! Ya es tuya!",
             "text_style": "subtitle"
           }
         },
