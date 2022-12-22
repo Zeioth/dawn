@@ -28,7 +28,7 @@ function gads_report_add_to_cart(url) {
       }
     };
     gtag('event', 'user_uploads_image', {
-        'send_to': 'AW-10906879768/s1pXCOSzkNgDEJiO59Ao',
+        'send_to': 'AW-10906879768/2eX_CMG_vuEDEJiO59Ao',
         'event_callback': callback
     });
     return false;
@@ -64,69 +64,9 @@ function gads_report_add_to_cart(url) {
   {% include 'teeinblue-scripts' %}
   {% if product.title == "Crear camiseta personalizada" %}
     {% include 'teeinblue-product-loader' %}
-    {% style %}
-      .tee-available-products > label:nth-child(1) {visibility: hidden;}
-      .tee-available-products > label:nth-child(1)::before {content: "Orientación";visibility: visible;}
-      .money {font-size: 2em;}
-    {% endstyle %}
-    <script>
-      window.addEventListener('load', function() {
-
-        // Custom function
-        function make_image_field_clickable(){
-          // Create a wrapper to contain the new tree
-          const teePhoto = document.getElementsByClassName("tee-photo");
-          const wrapper = document.createElement('label');
-          wrapper.setAttribute("id", "tee-photo-wrapper");
-          wrapper.style.display = 'flex'; // Hace clickable todo el wrapper.
-          wrapper.style.cursor = 'copy'; // Hace que el cursor muestre que es clickable.
-          for (let i = 0; i < teePhoto.length; i++) {teePhoto[i].prepend(wrapper);}
-  
-          // Get tee-photo-placeholder and make it children of wrapper
-          const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
-          for (let i = 0; i < teePhoto.length; i++) {
-            if(teePhotoPlaceholder[i]){
-              wrapper.prepend(teePhotoPlaceholder[i]);
-              teePhotoPlaceholder[i].style.display = 'none';
-            }
-          }
-  
-          // Make it clickable no matter what orientation is selected when the page is loaded
-          const teeRadio = document.getElementsByClassName("tee-radio");
-          for (let i = 0; i < teeRadio.length; i++) {
-            // Solo queremos disparar esto si el boton horizontal está activo
-            if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-129732");}
-            // Solo queremos disparar esto si el boton vertical está activo
-            if(teeRadio[1].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-598010");}
-          }
-
-          // Also make it clickable after a photo has been already uploaded
-          const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
-          for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
-            
-          // Also make it clickable after choosing orientation
-          teeRadio[0].addEventListener("click", function() {
-            setTimeout(function(){make_image_field_clickable();}, 1000);
-          });
-          teeRadio[1].addEventListener("click", function() {
-            setTimeout(function(){make_image_field_clickable();}, 1000);
-          });
-
-          // Also add click event handler to the image field
-          wrapper.addEventListener("click", function() {
-            gtag_report_user_uploads_image();
-          });
-       } // END OF make_image_field_clickable()
-
-        // START - Call method on page load
-        make_image_field_clickable();
-        // END - Call method on page load
-
-      })
-      </script>
+    {% include 'teeinblue-custom' %}
   {% endif %}
   
-
 
   {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
   {%- if first_3d_model -%}

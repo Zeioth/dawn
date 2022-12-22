@@ -1,0 +1,383 @@
+{% style %}
+      //.tee-available-products > label:nth-child(1) {visibility: hidden;}
+      //.tee-available-products > label:nth-child(1)::before {content: "Subir Imagen";visibility: hidden;}
+      .tee-available-products > label:nth-child(1) {display: none;}
+      .money {font-size: 2em;}
+      
+      // Add to cart microinteraction (hover)
+      .addToCartButton {
+        transition-duration: 0.4s !important;
+      }
+      .addToCartButton:hover {
+        background-color: #b91d22 !important;
+        color: white !important;
+      }
+  
+      // Size buttons microinteraction (hover)
+      .sizeButtonsHoverEffect {
+        transition-duration: 0.4s !important;
+      }
+      .sizeButtonsHoverEffect:hover {
+        background-color: #F3F3F3 !important;
+      }
+      .active { pointer-events: none; } // Make elements non clickable while selected.
+{% endstyle %}
+      
+<script>
+  window.addEventListener('load', function() {
+
+    // Custom function
+    function make_image_field_clickable(){
+      // FIX - Prevents unwanted clicks while changing the DOM
+      make_teeinblue_clickable_delay(); // It's very important we do this outside of any setTimeout    
+    
+      // Create a wrapper to contain the new tree
+      const teePhoto = document.getElementsByClassName("tee-photo");
+      const wrapper = document.createElement('label');
+      wrapper.setAttribute("id", "tee-photo-wrapper");
+      wrapper.style.display = 'flex'; // Hace clickable todo el wrapper.
+      wrapper.style.cursor = 'copy'; // Hace que el cursor muestre que es clickable.
+      for (let i = 0; i < teePhoto.length; i++) {teePhoto[i].prepend(wrapper);}
+
+      // Get tee-photo-placeholder and make it children of wrapper
+      const uploadImageCaption = document.createElement('div');
+      uploadImageCaption.innerHTML = "Subir Imagen";
+      uploadImageCaption.setAttribute("id", "upload-image-caption");
+      const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
+      for (let i = 0; i < teePhoto.length; i++) {
+        if(teePhotoPlaceholder[i]){
+          teePhotoPlaceholder[i].style.setProperty('flex-direction', 'column', 'important');
+          teePhotoPlaceholder[i].append(uploadImageCaption);
+          wrapper.prepend(teePhotoPlaceholder[i]);
+        }
+        // HOTFIX: If the teePlaceholder array has more than 1 position, then we hide.
+        //         That way we avoid hiding on the varieties with only one element.
+        //         Potentially fixable in an elegant way by re-creating the varieties.
+        if(teePhotoPlaceholder[1]){teePhotoPlaceholder[i].style.display = 'none';}
+
+      }
+
+      // Comment this like if you re-enable orientation.
+      //wrapper.setAttribute("for", "tee-photo-layer-129732")
+
+      // Make it clickable no matter what orientation is selected when the page is loaded
+      const teeRadio = document.getElementsByClassName("tee-radio");
+      for (let i = 0; i < teeRadio.length; i++) {
+        // Solo queremos disparar esto si el boton vertical está activo
+        if(teeRadio[0].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-501212");}
+        // Solo queremos disparar esto si el boton horizontal está activo
+        if(teeRadio[1].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-924793");}
+        // Solo queremos disparar esto si el boton "A tamaño comleto" está activo
+        if(teeRadio[2].classList.contains('active')){wrapper.setAttribute("for", "tee-photo-layer-272941");}        
+      }
+
+      // Also make it clickable after a photo has been already uploaded
+      const teeUploadedPhoto = document.getElementsByClassName('tee-photo-uploaded');
+      for (let i = 0; i < teeUploadedPhoto.length; i++) {wrapper.prepend(teeUploadedPhoto[i]);}
+
+      // Also make it clickable after choosing orientation
+      for (let i = 0; i < 3; i++) {
+        teeRadio[i].addEventListener("click", function() {
+          teeinblue_make_image_field_clickable_reset_state();
+          teeinblue_reorder_fields_reset_state();
+          setTimeout(function(){
+            make_image_field_clickable();
+            reorder_fields();
+          }, 250);});
+      }
+
+
+      // Also add click event handler to the image field
+      // (On click, fadeout and hide caption)
+      wrapper.addEventListener("click", function() {
+        gtag_report_user_uploads_image();
+        uploadImageCaption.style.setProperty('transition', 'opacity 1s', 'important');
+        uploadImageCaption.style.opacity = '0';
+        document.getAnimations().forEach((animation) => {animation.cancel();}); // Stop all animations
+        setTimeout(function(){
+          uploadImageCaption.style.display = 'none';
+        }, 250);
+      });
+
+      // EXTRA HACK: Da efecto "flash" al caption "Subir imagen"
+      /*
+      setTimeout(function(){
+        const imageTitle = document.getElementById("image-title");
+        // Aquí estamos quitandole la clase 'tee-option__title' y asignando a imageTitle todas sus propiedades excepto opacity (soluciona bug de animación no disparandose si opacity tiene algún valor).
+        imageTitle.classList.remove("tee-option__title");
+        imageTitle.style.setProperty('display', 'block', 'important');
+        imageTitle.style.setProperty('margin', '0 0 7px', 'important');
+        imageTitle.style.setProperty('color', 'inherit', 'important');
+        imageTitle.style.setProperty('font-size', '1em', 'important');
+        imageTitle.animate([
+          // fotogramas clave (cada linea es un fotograma)
+              { opacity: 0, },
+              { opacity: 0.8},
+              { opacity: 1 },
+              { opacity: 1, color: "gray" }
+        ], {
+          // opciones de sincronización
+          duration: 1700,
+          iterations: Infinity
+        });
+      }, 250);
+      */
+
+      // EXTRA HACK: Da efecto "flash" al caption "Subir imagen" del interior de la caja
+      setTimeout(function(){
+        const imageTitle = document.getElementById("upload-image-caption");
+        imageTitle.animate([
+          // fotogramas clave (cada linea es un fotograma)
+              { opacity: 0, },
+              { opacity: 0.8},
+              { opacity: 1 },
+              { opacity: 1, color: "gray" }
+        ], {
+          // opciones de sincronización
+          duration: 1700,
+          iterations: Infinity
+        });
+      }, 250);
+      
+      // EXTRA HACK: Make image printarea trigger image select depending of the active option.
+      const imagePrintareaWrapper = document.getElementsByClassName("tee-printarea-wrapper");
+      setTimeout(function(){
+        for (let i = 0; i < imagePrintareaWrapper.length; i++) {
+          imagePrintareaWrapper[i].style.setProperty('pointer-events', 'initial', 'important');
+          imagePrintareaWrapper[i].style.cursor = 'copy';
+          // Solo queremos disparar esto si el boton vertical está activo
+          if(teeRadio[0].classList.contains('active')){imagePrintareaWrapper[i].addEventListener("click", function() {gtag_report_user_uploads_image();document.getElementById("tee-photo-layer-501212").click(); document.getAnimations().forEach((animation) => {animation.cancel();}); });}
+          // Solo queremos disparar esto si el boton horizontal está activo
+          if(teeRadio[1].classList.contains('active')){imagePrintareaWrapper[i].addEventListener("click", function() {gtag_report_user_uploads_image();document.getElementById("tee-photo-layer-924793").click(); document.getAnimations().forEach((animation) => {animation.cancel();}); });}
+          // Solo queremos disparar esto si el boton "A tamaño comleto" está activo
+          if(teeRadio[2].classList.contains('active')){imagePrintareaWrapper[i].addEventListener("click", function() {gtag_report_user_uploads_image();document.getElementById("tee-photo-layer-272941").click(); document.getAnimations().forEach((animation) => {animation.cancel();}); });}
+        }
+      }, 250);
+      
+
+          
+      // DISABLED: Alert en el selector 
+      // Also add change event handler to the image field (triggers when a file is selected)
+      //document.getElementById('tee-photo-layer-129732').onchange = function() {
+      //  setTimeout(function(){
+      //    const teeDialogInner = document.getElementsByClassName("tee-dialog-inner");
+      //    for (let i = 0; i < teeDialogInner.length; i++) {
+      //      // TODO: crea un div, dale las propiedades y hazle append.
+      //      const uploadImageAlert = document.createElement('div');
+      //      uploadImageAlert.setAttribute("id", "upload-image-alert");
+      //      uploadImageAlert.style.backgroundColor = 'red';
+      //      uploadImageAlert.style.color = 'white';
+      //      uploadImageAlert.style.height = "50px";
+      //      uploadImageAlert.textContent = 'CONSEJO: Para elegir tamaño/formato, pulsa este mensaje.';
+      //      teeDialogInner[i].prepend(uploadImageAlert);
+      //      console.log(teeDialogInner);
+      //    }
+      //  }, 1000);            
+      //};
+
+   } // END OF make_image_field_clickable()
+
+   function customize_size_field_onclick(){
+     // On click, add the class for the microinteraction too
+     let sizeButtonsOut = document.querySelectorAll("div.tee-option:nth-child(3) > div:nth-child(2) > div");
+     for (let i = 0; i < sizeButtonsOut.length; i++) {
+       sizeButtonsOut[i].classList.add("sizeButtonsHoverEffect");
+       sizeButtonsOut[i].addEventListener("click", function() {
+         setTimeout(function(){customize_size_field_onclick();}, 125);
+       });
+     }
+   }         
+
+   function make_image_field_bigger(){
+      // Bigger upload field (timer)
+      const placeholder = document.getElementsByClassName("tee-photo-placeholder");
+      for (let i = 0; i < placeholder.length; i++) {
+        placeholder[i].style.setProperty('width', '300px', 'important');
+        placeholder[i].style.setProperty('height', '213px', 'important');
+      }
+      const uploadField = document.getElementsByClassName("tee-photo-image");
+      for (let i = 0; i < uploadField.length; i++) {
+        uploadField[i].style.setProperty('max-width', '300px', 'important');
+        uploadField[i].style.setProperty('max-height', '213px', 'important');
+      }
+   }  
+
+    
+   function reorder_fields(){
+      // Create an image wrapper 
+      const imageWrapper = document.createElement('div');
+      imageWrapper.classList.add("tee-option");
+      imageWrapper.classList.add("tee-block");
+      imageWrapper.classList.add("tee-option--image");
+      const options = document.getElementsByClassName("tee-variants");
+      for (let i = 0; i < options.length; i++) {options[i].prepend(imageWrapper);}
+      
+      // Create an image wrapper title
+      const imageTitle = document.createElement('label');
+      imageTitle.setAttribute("id", "image-title");
+      imageTitle.classList.add("tee-option__title");
+      imageTitle.textContent = "Toca el recuadro para subir una imagen";
+      imageWrapper.prepend(imageTitle)
+      
+      // Re-posiciona Sube el campo imagen
+      imageField = document.getElementById("teeFormInputs");
+      imageWrapper.append(imageField)
+      
+      // Hide imageField background
+      imageField.classList.remove("tee-form-inputs");
+      
+      // Hide old title
+      oldOrientationTitle = document.getElementsByClassName("tee-field__heading");
+      if(oldOrientationTitle[1]){
+        oldOrientationTitle[1].style.display = 'none';
+        oldOrientationTitle[1].classList.remove("tee-field__heading");
+      }
+      if(oldOrientationTitle[2]){
+        oldOrientationTitle[2].style.display = 'none';
+        oldOrientationTitle[2].classList.remove("tee-field__heading");
+      } 
+
+      // Talla en vezde tamaño
+      sizeTitle = document.getElementsByClassName("tee-option__title");
+      sizeTitle[3].textContent = "Elige tu talla";
+     
+      // Color text
+      sizeTitle = document.getElementsByClassName("tee-option__title");
+      sizeTitle[2].textContent = "Elige tu color";
+
+      // Hide upload button
+      uploadImageButton = document.getElementsByClassName("tee-btn--upload");
+      for (let i = 0; i < uploadImageButton.length; i++) {uploadImageButton[i].style.display = 'none';}
+      
+
+      // Hide preview button on PCs and Tablets (Usar solo si tas activado el boton de preview en teeinblue)
+      //if(screen.width <= 1920) {
+      //  previewButton = document.getElementsByClassName("tee-btn--preview");
+      //  previewButton[0].style.display = 'none';
+      //}
+
+      // Make image field bigger every 100ms
+      var myVar = setInterval(make_image_field_bigger, 100);
+        
+      // Make color buttons round
+      let colorButtons = document.querySelectorAll(".tee-swatch--circle, .tee-swatch--circle .tee-swatch--color");
+      for (let i = 0; i < colorButtons.length; i++) {
+        colorButtons[i].style.setProperty('border-radius', '20%', 'important');
+
+      }
+
+      // Make color buttons bigger
+      colorButtons = document.getElementsByClassName("tee-swatch--color");
+      for (let i = 0; i < colorButtons.length; i++) {
+        colorButtons[i].style.setProperty('width', '60px', 'important');
+        colorButtons[i].style.setProperty('height', '60px', 'important');
+      }
+
+      // Make size buttons round
+      let sizeButtonsOut = document.querySelectorAll("div.tee-option:nth-child(3) > div:nth-child(2) > div");
+      for (let i = 0; i < sizeButtonsOut.length; i++) {
+        sizeButtonsOut[i].style.setProperty('border-radius', '20%', 'important');
+        sizeButtonsOut[i].style.setProperty('margin-right', '13px', 'important');
+        sizeButtonsOut[i].classList.add("sizeButtonsHoverEffect");
+        sizeButtonsOut[i].addEventListener("click", function() {
+          setTimeout(function(){customize_size_field_onclick();}, 250);
+        });
+      }
+        
+      // Make size buttons bigger
+      const sizeButtons = document.getElementsByClassName("isColor");
+      for (let i = 0; i < sizeButtons.length; i++) {
+        sizeButtons[i].style.setProperty('width', '80px', 'important');
+        sizeButtons[i].style.setProperty('height', '75px', 'important');
+        sizeButtons[i].style.setProperty('font-size', '25px', 'important');
+      }
+     
+      // Make add to cart bigger
+      cartButton = document.getElementById("teeAtcButton");
+      cartButton.style.height = '3em';
+      cartButton.style.fontSize = 'xx-large';
+      //cartButton.style.backgroundColor = '#01d449';
+      cartButton.style.backgroundColor = '#d42127';
+      cartButton.style.borderRadius = "5px";
+      cartButton.classList.add("addToCartButton");
+
+      // Decrease margin under title and change its color
+      const title = document.querySelectorAll("div.product__title > h1:nth-child(1)");
+      title[0].style.setProperty('margin-bottom', '-17px', 'important');
+      title[0].style.setProperty('color', 'rebeccapurple', 'important');
+      
+      // Increase margin over image field
+      const imageFieldTitle = document.getElementsByClassName("tee-option--image");
+      imageFieldTitle[0].style.setProperty('margin-top', '26px', 'important');
+
+      // Decreased margin below image field
+      imageFieldTitle[0].style.setProperty('margin-bottom', '5px', 'important');
+
+      // Decreased margin above size field
+      const sizeFieldTitle = document.getElementsByClassName("tee-option--size");
+      sizeFieldTitle[0].style.setProperty('margin-top', '-10px', 'important');
+
+      // Change color of selected size (WIP)
+      //const selectedSize = document.querySelectorAll("div.tee-option:nth-child(3) > div:nth-child(2) > div:nth-child(n)");
+      //selectedSize[0].classList.add("sizeButtonsHoverEffect");
+      //selectedSize[0].style.setProperty('font-weight', '600', 'important');
+      //selectedSize[0].style.setProperty('background-color', 'black', 'important');
+      //selectedSize[0].style.setProperty('color', 'white', 'important');
+      //selectedSize[0].style.setProperty('border-color', 'grey', 'important');
+
+      // de-capitalize titles
+      const allTitles = document.getElementsByClassName("tee-option__title");
+      for (let i = 0; i < allTitles.length; i++) {
+        allTitles[i].style.setProperty('font-family', 'arimo', 'important');
+        allTitles[i].style.setProperty('font-weight', '600', 'important');
+        allTitles[i].style.setProperty('letter-spacing', '1.5px', 'important');
+        allTitles[i].style.setProperty('text-transform', 'initial', 'important');
+      }
+        
+    } // END of reorder_fields()
+
+   // RESET STATE METHODS
+   function teeinblue_make_image_field_clickable_reset_state(){
+      const teePhoto = document.getElementsByClassName("tee-photo");
+      const wrapper = document.getElementById("tee-photo-wrapper"); // Cogete el wrapper
+      const uploadImageCaption = document.getElementById("upload-image-caption");
+      const teePhotoPlaceholder = document.getElementsByClassName("tee-photo-placeholder");
+
+      // Borra el primer elemento de cada placeholder (para deshacer el prepend)
+      for (let i = 0; i < teePhoto.length; i++) {
+        // Nos cargamos los caption (opcional)
+        uploadImageCaption.remove();
+        // Por cada placeholder, hazle remove a la primera entrada.
+        if(teePhotoPlaceholder[i]){teePhotoPlaceholder[i].style.display = 'initial';}
+        if(teePhotoPlaceholder[0]){teePhotoPlaceholder[0].remove();}
+      }
+      // Now we can remove botton to top safely.
+      wrapper.remove(); // WARNING: Throws a TypeError but otherwise works fine.
+   } // END of teeinblue_make_image_field_clickable_reset_state()     
+
+   function teeinblue_reorder_fields_reset_state(){
+      // Revertir imageField a su posición original
+      const imageField = document.getElementById("teeFormInputs");
+      const teeFormActions = document.getElementById("teeFormActions");
+      teeFormActions.before(imageField);
+    } // END of teeinblue_reorder_fields_reset_state()              
+
+    // HOTFIX: Partially fixes page breaking when clicked too quick while modifying DOM,
+    //         making it 99% hard to break (but not impossible, if you really try).
+    //         The fix seems to work 99% reliably only on chrome at the moment.
+    //         On Firefox also improves things, just not that much.
+    // NOTE: Not much more we can do to improve it. We are locking clicks during DOM transformations, yus;
+    //       But the click locking is a dom transformation itself, meaning it can take some ms to be applyed.
+    //       Therefore it can be bypassed if the browser is not quick enogh to apply this first DOM transformation.
+    function make_teeinblue_clickable_delay(){
+      document.getElementsByClassName("js")[0].style.setProperty('pointer-events', 'none', 'important');
+      setTimeout(function(){document.getElementsByClassName("js")[0].style.setProperty('pointer-events', 'initial', 'important');}, 100);
+    }
+        
+    // START - Call method on page load
+    make_image_field_clickable();
+    reorder_fields();
+    // END - Call method on page load
+
+  }) // END of load method
+  </script>

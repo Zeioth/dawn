@@ -30,73 +30,11 @@ window.TeeInBlueCampaign = {
 {% if teeProduct %}
 <script type="text/javascript" src="https://sdk.teeinblue.com/shopify/app-v1.js?token=gO30GD3ySPghvilI6svjiTH643Bs8BVV&shop=neocityshirt.myshopify.com" defer="defer"></script>
 <style>
-  @keyframes tee-spinner-grow {
-    0% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes tee-spinner-grow {
-    0% {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-    }
-    50% {
-      opacity: 1;
-    }
-  }
-  .teeinblue-product-loading .teeinblue-page-loader {
-    display: flex !important;
-  }
-  .teeinblue-page-loader {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2147483647;
+  .teeinblue-product-loading form[action*="/cart/add"],
+  .teeinblue-product-loading .product-form,
+  .teeinblue-product-loading .product-form__input,
+  .teeinblue-product-loading variant-radios {
     display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(255,255,255,.96);
-  }
-  .tee-spinner-grow {
-    display: inline-block;
-    width: 4rem;
-    height: 4rem;
-    vertical-align: text-bottom;
-    background-color: #333;
-    border-radius: 50%;
-    opacity: 0;
-    -webkit-animation: spinner-grow .75s linear infinite;
-    animation: tee-spinner-grow 1s linear infinite;
-  }
-  .tee-sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    border: 0;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-  }
-  .teeinblue-product-loading main,
-  .teeinblue-product-loading .site-wrapper,
-  .teeinblue-product-loading .main-content,
-  .teeinblue-product-loading .mainContentArea,
-  .teeinblue-product-loading .product-page-wrapper,
-  .teeinblue-product-loading .product__content,
-  .teeinblue-product-loading .main,
-  .teeinblue-product-loading .global-wrapper,
-  .teeinblue-product-loading .content-main,
-  .teeinblue-product-loading .layout--main-content,
-  .teeinblue-product-loading .page-body-content {
-    opacity: 0;
   }
 </style>
 <script>
@@ -124,14 +62,10 @@ window.TeeInBlueCampaign = {
     }
   }
 
-  if (/\/products\/([A-Za-z0-9-_%]+)(\/)?/.test(window.location.href)) {
-    teeinblueAddLoader();
-  }
-
   teeinblueDocumentReady(function() {
     var timeout = window.TeeInBlue && window.TeeInBlue.loaderTimeout
       ? window.TeeInBlue.loaderTimeout
-      : 3000;
+      : 2000;
 
     document.addEventListener('teeinblue-event-component-injected', function() {
       teeinblueHideLoader();
@@ -141,6 +75,8 @@ window.TeeInBlueCampaign = {
       teeinblueHideLoader();
     }, timeout);
   });
+
+  teeinblueAddLoader();
 </script>
 {% endif %}
 {% endif %}
