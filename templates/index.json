@@ -1,1 +1,225 @@
-{"sections":{"rich_text":{"type":"rich-text","disabled":true,"blocks":{"heading":{"type":"heading","settings":{"heading":"<p>Talk about your brand<\/p>","heading_size":"h1"}},"text":{"type":"text","settings":{"text":"<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"}}},"block_order":["heading","text"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"background-1","full_width":true,"padding_top":40,"padding_bottom":0}},"1654652208b80e0b97":{"type":"featured-collection","settings":{"title":"Te recomendamos","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"frontpage","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection":{"type":"featured-collection","settings":{"title":"Los mas vendidos","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"los-mas-vendidos","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":false,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":28,"padding_bottom":36}},"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Mira mira!","heading_size":"h0"}},"text":{"type":"text","settings":{"text":"Tenemos un taco de cosas 🌮","text_style":"body"}},"button":{"type":"buttons","settings":{"button_label_1":"Ver todas las camisetas","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":false,"button_label_2":"Sorprendeme!","button_link_2":"shopify:\/\/collections\/computer-nerd","button_style_secondary_2":true}}},"block_order":["heading","text","button"],"settings":{"image":"shopify:\/\/shop_images\/taco-min-min-short.png","image_overlay_opacity":50,"image_height":"medium","adapt_height_first_image":true,"desktop_content_position":"middle-center","show_text_box":true,"desktop_content_alignment":"center","color_scheme":"background-1","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"165465237003b8c6f4":{"type":"featured-collection","settings":{"title":"Tampoco te pierdas","heading_size":"h1","description":"","show_description":false,"description_style":"body","collection":"camisetas","products_to_show":4,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"multicolumn":{"type":"multicolumn","blocks":{"column1":{"type":"column","settings":{"title":"✈️ Envío gratuito a toda España","text":"<p>En pedidos superiores a 25€<\/p>","link_label":"","link":""}},"column2":{"type":"column","settings":{"title":"💵 Pago seguro","text":"<p>Cifrado 256-bit SSL<\/p>","link_label":"","link":""}},"column3":{"type":"column","settings":{"title":"🚚 30 dias de devolución","text":"<p>Garantizada para todos los pedidos<\/p>","link_label":"","link":""}}},"block_order":["column1","column2","column3"],"settings":{"title":"","heading_size":"h2","image_width":"third","image_ratio":"adapt","columns_desktop":3,"column_alignment":"center","background_style":"primary","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":28}}},"order":["rich_text","1654652208b80e0b97","featured_collection","image_banner","165465237003b8c6f4","multicolumn"]}
+{
+  "sections": {
+    "rich_text": {
+      "type": "rich-text",
+      "disabled": true,
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Talk about your brand<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "1654652208b80e0b97": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Te recomendamos",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Los mas vendidos",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "los-mas-vendidos",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mira mira!",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Tenemos un taco de cosas 🌮",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Ver todas las camisetas",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "Sorprendeme!",
+            "button_link_2": "shopify:\/\/collections\/computer-nerd",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/taco-min-min-short.png",
+        "image_overlay_opacity": 50,
+        "image_height": "medium",
+        "adapt_height_first_image": true,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "165465237003b8c6f4": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Tampoco te pierdas",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "camisetas",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "title": "✈️ Envío gratuito a toda España",
+            "text": "<p>En pedidos superiores a 25€<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "title": "💵 Pago seguro",
+            "text": "<p>Cifrado 256-bit SSL<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "title": "🚚 30 dias de devolución",
+            "text": "<p>Garantizada para todos los pedidos<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "rich_text",
+    "1654652208b80e0b97",
+    "featured_collection",
+    "image_banner",
+    "165465237003b8c6f4",
+    "multicolumn"
+  ]
+}
