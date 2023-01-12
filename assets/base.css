@@ -2181,11 +2181,12 @@ input[type='checkbox'] {
   padding: 0;
 }
 
-.announcement-bar__message {
-  padding: 1rem 0;
-  margin: 0;
-  letter-spacing: 0.1rem;
-}
+// Moved to announcement-bar.liquid
+//.announcement-bar__message {
+  //padding: 1rem 0;
+  //margin: 0;
+  //letter-spacing: 0.1rem;
+//}
 
 /* section-header */
 #shopify-section-header {
