@@ -2182,7 +2182,8 @@ input[type='checkbox'] {
 }
 
 .announcement-bar__message {
-  /*padding: 1rem 0;
+  /* Moved to anouncement-bar.liquid
+  padding: 1rem 0;
   margin: 0;
   letter-spacing: 0.1rem;*/
 }
