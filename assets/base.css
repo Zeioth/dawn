@@ -694,6 +694,7 @@ details > * {
 }
 
 :root {
+  --duration-shortest: 50ms;
   --duration-short: 100ms;
   --duration-default: 200ms;
   --duration-long: 500ms;
