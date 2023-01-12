@@ -284,6 +284,7 @@
 
 .card-information {
   width: 100%;
+  display: none;
 }
 
 .card-information > * {
