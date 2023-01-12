@@ -1,14 +1,14 @@
 /* HACK: On desktop, hide the search button */
-/*@media screen and (min-width: 990px) {
+@media screen and (min-width: 990px) {
   .header__icon--search{
     display: none;
   }
-}*/
+}
 
 /* HACK: Always hide the search button */
-.header__icon--search{
+/*.header__icon--search{
   display: none;
-}
+}*/
 
 .search__input.field__input {
   padding-right: 5rem;
