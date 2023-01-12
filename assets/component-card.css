@@ -207,12 +207,12 @@
   .card .media.media--hover-effect > img:only-child,
   .card-wrapper .media.media--hover-effect > img:only-child {
     transition: transform var(--duration-short) ease;
-    transform-origin: center 31%;
+    transform-origin: center 28%;
   }
 
   .card:hover .media.media--hover-effect > img:first-child:only-child,
   .card-wrapper:hover .media.media--hover-effect > img:first-child:only-child {
-    transform: scale(1.5);
+    transform: scale(1.7);
   }
 
   .card-wrapper:hover
