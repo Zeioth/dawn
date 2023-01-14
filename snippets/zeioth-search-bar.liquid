@@ -32,38 +32,16 @@
     
     /* Borders */
     .field::after{
-      //content: none;
-      //border-radius: 4px;
-      //border: 1px solid red;
-
-      pointer-events: none;
-      content: "";
-      position: absolute;
-      top: var(--inputs-border-width);
-      right: var(--inputs-border-width);
-      bottom: var(--inputs-border-width);
-      left: var(--inputs-border-width);
       border: .1rem solid red;
       border-radius: 4px;
       box-shadow: none;
-      transition: box-shadow var(--duration-short) ease;
-      z-index: 1;
     }
 
     /* Borders on hover */
     .field:hover.field::after, .select:hover.select::after, .select__select:hover.select__select::after, .customer .field:hover.field::after, .customer select:hover.select::after, .localization-form__select:hover.localization-form__select::after{
-      pointer-events: none;
-      content: "";
-      position: absolute;
-      top: var(--inputs-border-width);
-      right: var(--inputs-border-width);
-      bottom: var(--inputs-border-width);
-      left: var(--inputs-border-width);
       border: .1rem solid red;
       border-radius: 4px;
       box-shadow: none;
-      transition: box-shadow var(--duration-short) ease;
-      z-index: 1;
     }
 
     /* Borders on focus */
