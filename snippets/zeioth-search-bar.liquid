@@ -52,23 +52,30 @@
     }
 
     /*Fix for weird borders*/
-    .customer select::after{
-      //content: none;
-      border-radius: 4px;
-      border: 1px solid red;
-    }
-
-    /*Fix for weird borders*/
-    .localization-form__select::after{
+    .field::after{
       content: none;
       //border-radius: 4px;
       //border: 1px solid red;
     }
 
+    /*Fix for weird borders*/
+    .customer select::after{
+      content: none;
+      //border-radius: 4px;
+      //border: 1px solid red;
+    }
+
+    /*Fix for weird borders*/
+    .localization-form__select::after{
+      //content: none;
+      border-radius: 4px;
+      border: 1px solid red;
+    }
+
 
     /*Fix for weird borders*/
     //.field::after, .select::after, .customer .field::after, .customer select::after, .localization-form__select::after{
-      content: none;
+      //content: none;
       //border-radius: 4px;
       //border: 1px solid red;
     //}
