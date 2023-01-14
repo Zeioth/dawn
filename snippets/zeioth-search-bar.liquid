@@ -32,7 +32,7 @@
     
     /* Borders */
     .field::after{
-      //content: none;
+      content: none;
       //border: 2px solid DarkGray;
       //border-radius: 6px;
       //box-shadow: none;
@@ -41,9 +41,9 @@
     /* Borders on hover */
     .field:hover.field::after, .select:hover.select::after, .select__select:hover.select__select::after, .customer .field:hover.field::after, .customer select:hover.select::after, .localization-form__select:hover.localization-form__select::after{
       content: "";
-      border: 2px solid black;
+      //border: 2px solid black;
       //border-radius: 6px;
-      //box-shadow: none;
+      box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground),var(--inputs-border-opacity))
     }
 
     /* Borders on focus */
