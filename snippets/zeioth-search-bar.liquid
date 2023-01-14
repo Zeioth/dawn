@@ -66,8 +66,21 @@
       z-index: 1;
     }
 
-    /* Borders on clicked */
-
+    /* Borders on focus */
+    .field:focus.field::after, .select:focus.select::after, .select__select:focus.select__select::after, .customer .field:focus.field::after, .customer select:focus.select::after, .localization-form__select:focus.localization-form__select::after{
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      top: var(--inputs-border-width);
+      right: var(--inputs-border-width);
+      bottom: var(--inputs-border-width);
+      left: var(--inputs-border-width);
+      border: .1rem solid red;
+      border-radius: 4px;
+      box-shadow: none;
+      transition: box-shadow var(--duration-short) ease;
+      z-index: 1;
+    }
 
 
   }
