@@ -40,14 +40,15 @@ function gtag_report_predictive_search(url) {
 
   /*Show search bar on the search results only on non desktop*/
   @media screen and (min-width: 990px) {
-    .template-search__search {
-      display: none;
-    }
-    .template-search__header {
+
+    :is(.template-search) .template-search__header {
       text-align: left;
     }
     :is(.template-search__header) .h2{
       margin-top: 0px;
+    }
+    .template-search__search {
+      display: none;
     }
   } 
   
