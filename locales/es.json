@@ -196,7 +196,7 @@
         "other": "{{ count }} resultados",
         "many": "{{ count }} resultados"
       },
-      "title": "Has buscado",
+      "title": "Resultados",
       "page": "Página",
       "products": "Productos",
       "search_for": "Buscar “{{ terms }}”",
