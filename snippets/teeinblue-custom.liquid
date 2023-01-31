@@ -222,23 +222,21 @@
       // - On size button click (test this)
       // - On image uploaded event
 
+      // BUG: Sometimes, 
       
       const uploaded = document.getElementsByClassName("tee-printarea-wrapper");
       if(uploaded){
         const images = document.getElementsByClassName("tee-printarea-wrapper");
         
         // Hide preview background image
-        
         images[1].style.setProperty('visibility', 'hidden', 'important');
-        images[2].style.setProperty('visibility', 'hidden', 'important');
-        images[4].style.setProperty('visibility', 'hidden', 'important');
-        
         
         // Hide message image
-        //mockup[4][0].style.setProperty('display', 'none', 'important');
+        images[2].style.setProperty('visibility', 'hidden', 'important');
 
         // Hide overlay image
-        //mockup[6][0].style.setProperty('display', 'none', 'important');
+        images[4].style.setProperty('visibility', 'hidden', 'important');
+
       }
       
    }  
