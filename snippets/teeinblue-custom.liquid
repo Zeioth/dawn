@@ -39,7 +39,10 @@
     function make_image_field_clickable(){
       // FIX - Prevents unwanted clicks while changing the DOM
       make_teeinblue_clickable_delay(); // It's very important we do this outside of any setTimeout    
-    
+
+      // FIX - Hide mockup base layers after an image is uploaded
+      hide_mockup_images_on_uploaded();
+      
       // Create a wrapper to contain the new tree
       const teePhoto = document.getElementsByClassName("tee-photo");
       const wrapper = document.createElement('label');
@@ -212,7 +215,7 @@
    }  
 
 
-    function hide_preview_images_on_uploaded(){
+    function hide_mockup_images_on_uploaded(){
       // Check if .tee-printarea-wrapper exists
       const uploaded = document.getElementsByClassName("tee-printarea-wrapper");
       if(uploaded){
