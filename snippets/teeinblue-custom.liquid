@@ -217,6 +217,12 @@
 
     function hide_mockup_images_on_uploaded(){
       // Check if .tee-printarea-wrapper exists
+      // You must call this:
+      // - On page reload
+      // - On size button click (test this)
+      // - On image uploaded event
+
+      
       const uploaded = document.getElementsByClassName("tee-printarea-wrapper");
       if(uploaded){
         const mockup = document.getElementsByClassName("tee-mockup");
