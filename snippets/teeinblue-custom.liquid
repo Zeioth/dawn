@@ -39,9 +39,6 @@
     function make_image_field_clickable(){
       // FIX - Prevents unwanted clicks while changing the DOM
       make_teeinblue_clickable_delay(); // It's very important we do this outside of any setTimeout    
-
-      // FIX - Hide mockup base layers after an image is uploaded
-      hide_mockup_images_on_uploaded();
       
       // Create a wrapper to contain the new tree
       const teePhoto = document.getElementsByClassName("tee-photo");
@@ -212,32 +209,6 @@
         uploadField[i].style.setProperty('max-width', '300px', 'important');
         uploadField[i].style.setProperty('max-height', '213px', 'important');
       }
-   }  
-
-
-    function hide_mockup_images_on_uploaded(){
-      // Check if .tee-printarea-wrapper exists
-      // You must call this:
-      // - On page reload [ok]
-      // - On size button click (test this)
-      // - On image uploaded event
-      // BUG: Sometimes, if the page loads too fast, the nodes won't exist yet.
-      
-      const uploaded = document.getElementsByClassName("tee-printarea");
-      if(uploaded){
-        const images = document.getElementsByClassName("tee-printarea-wrapper");
-        
-        // Hide preview background image
-        images[1].style.setProperty('visibility', 'hidden', 'important');
-        
-        // Hide message image
-        images[2].style.setProperty('visibility', 'hidden', 'important');
-
-        // Hide overlay image
-        images[4].style.setProperty('visibility', 'hidden', 'important');
-
-      }
-      
    }  
     
     
