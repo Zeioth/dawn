@@ -225,11 +225,10 @@
       
       const uploaded = document.getElementsByClassName("tee-printarea-wrapper");
       if(uploaded){
-        const mockup = document.getElementsByClassName("tee-mockup");
+        const images = document.getElementsByClassName("tee-printarea-wrapper");
         
         // Hide preview background image
-        const test = mockup[0].style.setProperty('display', 'none', 'important');
-        console.log("TEST"+test);
+        console.log("TEST"+images);
         
         // Hide message image
         //mockup[4][0].style.setProperty('display', 'none', 'important');
