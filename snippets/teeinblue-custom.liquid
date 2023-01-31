@@ -218,11 +218,10 @@
     function hide_mockup_images_on_uploaded(){
       // Check if .tee-printarea-wrapper exists
       // You must call this:
-      // - On page reload
+      // - On page reload [ok]
       // - On size button click (test this)
       // - On image uploaded event
-
-      // BUG: Sometimes, 
+      // BUG: Sometimes, if the page loads too fast, the nodes won't exist yet.
       
       const uploaded = document.getElementsByClassName("tee-printarea-wrapper");
       if(uploaded){
