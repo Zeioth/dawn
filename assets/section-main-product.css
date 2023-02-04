@@ -263,6 +263,11 @@ fieldset.product-form__input .form__label {
   border-radius: 0.20%;
 }
 
+.button::after, .shopify-challenge__button::after, .customer button::after, .shopify-payment-button__button--unbranded::after{
+  box-shadow: none;
+}
+
+
 .no-js .product-form__submit.button--secondary {
   --color-button: var(--color-base-accent-1);
   --color-button-text: var(--color-base-solid-button-labels);
