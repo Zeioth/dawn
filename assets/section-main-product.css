@@ -268,10 +268,6 @@ fieldset.product-form__input .form__label {
   box-shadow: none;
 }
 
-.button::hover, .shopify-challenge__button::hover, .customer button::hover, .shopify-payment-button__button--unbranded::hover{
-  box-shadow: none;
-}
-
 .no-js .product-form__submit.button--secondary {
   --color-button: var(--color-base-accent-1);
   --color-button-text: var(--color-base-solid-button-labels);
