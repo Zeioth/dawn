@@ -260,7 +260,7 @@ fieldset.product-form__input .form__label {
 .product-form__submit {
   margin-bottom: 1rem;
   background-color: rgb(212, 33, 39);
-  border-radius: 20%;
+  border-radius: 1%;
 }
 
 .no-js .product-form__submit.button--secondary {
