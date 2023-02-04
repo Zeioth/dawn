@@ -263,8 +263,11 @@ fieldset.product-form__input .form__label {
   border-radius: 0.20%;
 }
 
-// TODO: Necesita un selector padre para aplicarlo solo a este boton especifico.
 .button::after, .shopify-challenge__button::after, .customer button::after, .shopify-payment-button__button--unbranded::after{
+  box-shadow: none;
+}
+
+.button::hover, .shopify-challenge__button::hover, .customer button::after, .shopify-payment-button__button--unbranded::after{
   box-shadow: none;
 }
 
