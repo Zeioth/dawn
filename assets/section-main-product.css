@@ -263,11 +263,12 @@ fieldset.product-form__input .form__label {
   border-radius: 0.20%;
 }
 
+/* TODO: Añade el selector padre, para que solo aplique a esta sección, ver componente search como ejemplo */
 .button::after, .shopify-challenge__button::after, .customer button::after, .shopify-payment-button__button--unbranded::after{
   box-shadow: none;
 }
 
-.button::hover, .shopify-challenge__button::hover, .customer button::after, .shopify-payment-button__button--unbranded::after{
+.button::hover, .shopify-challenge__button::hover, .customer button::hover, .shopify-payment-button__button--unbranded::hover{
   box-shadow: none;
 }
 
