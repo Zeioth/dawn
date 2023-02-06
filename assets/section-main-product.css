@@ -267,7 +267,7 @@ fieldset.product-form__input .form__label {
 
 /*Normal */
 .product-form__buttons .button::after{
-  /*box-shadow: none;*/
+  box-shadow: none;
 }
 
 /*Hover*/
