@@ -113,7 +113,7 @@
         "eff3986f-a587-4efb-a955-8099a7eb2ddb": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<legend class=\"name-option\"><a href=\"\/pages\/size-chart\">Cual es mi talla?<\/a><\/legend>"
+            "custom_liquid": "<legend class=\"name-option\"><a href=\"\/pages\/size-chart\">Medidas de cada talla<\/a><\/legend>"
           }
         }
       },
