@@ -264,6 +264,7 @@ fieldset.product-form__input .form__label {
 }
 
 /* TODO: Añade el selector padre, para que solo aplique a esta sección, ver componente search como ejemplo */
+/* TODO: Tambien para search, para que no afecte todos los fields del diseño */
 .button:not([disabled]):hover::after, .shopify-challenge__button:hover::after, .customer button:hover::after, .shopify-payment-button__button--unbranded:hover::after{
   box-shadow: none;
 }
