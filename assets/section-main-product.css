@@ -257,6 +257,7 @@ fieldset.product-form__input .form__label {
   max-width: 25rem;
 }
 
+/*Normal */
 .product-form__submit {
   margin-bottom: 1rem;
   background-color: rgb(212, 33, 39);
@@ -264,6 +265,13 @@ fieldset.product-form__input .form__label {
   box-shadow: none;
 }
 
+/*Hover*/
+.product-form__submit {
+  margin-bottom: 1rem;
+  background-color: #e50000;
+  border-radius: 4px;
+  box-shadow: none;
+}
 
 /*Normal */
 .product-form__buttons .button::after{
