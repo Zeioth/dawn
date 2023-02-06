@@ -264,8 +264,7 @@ fieldset.product-form__input .form__label {
   box-shadow: none;
 }
 
-/* TODO: Añade el selector padre, para que solo aplique a esta sección, ver componente search como ejemplo */
-/* TODO: Tambien para search, para que no afecte todos los fields del diseño */
+
 /*Normal */
 .product-form__buttons .button::after{
   box-shadow: none;
@@ -273,7 +272,7 @@ fieldset.product-form__input .form__label {
 
 /*Hover*/
 .product-form__buttons .button:hover::after{
-  box-shadow: none;
+  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
 }
 
 .no-js .product-form__submit.button--secondary {
