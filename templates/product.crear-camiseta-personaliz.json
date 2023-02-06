@@ -208,7 +208,7 @@
         "image-with-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/favicon-bw.png",
+        "image": "shopify:\/\/shop_images\/favicon.png",
         "height": "small",
         "desktop_image_width": "small",
         "layout": "text_first",
