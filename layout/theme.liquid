@@ -307,13 +307,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-    <!-- Load size chart custom code for products -->
-    {% if request.page_type == 'product' %}
-      {% if product.options contains 'Size' %}
-        {% render 'size-chart' %}
-      {% endif %}
-    {% endif %}
     
   </body>
 </html>
