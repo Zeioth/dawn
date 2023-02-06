@@ -208,10 +208,10 @@
         "image-with-text-1"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/favicon.png",
-        "height": "small",
+        "image": "shopify:\/\/shop_images\/logo-oval_bde88d90-6f11-4eb9-8cf1-ddfb827a2452.webp",
+        "height": "adapt",
         "desktop_image_width": "small",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "overlap",
