@@ -304,21 +304,26 @@
      
       // Make add to cart bigger
       cartButton = document.getElementById("teeAtcButton");
-      cartButton.style.height = '1.4rem';
       //cartButton.style.backgroundColor = '#01d449';
       cartButton.style.backgroundColor = '#d42127';
       cartButton.style.borderRadius = "4px";
-      cartButton.classList.add("addToCartButton");
-      cartButton.style.setProperty('font-size', '1.4rem', 'important');
       cartButton.style.setProperty('font-family', 'Assistant, sans-serif', 'important');
       cartButton.style.setProperty('font-weight', '400', 'important');
       cartButton.style.setProperty('letter-spacing', '.1rem', 'important');
-
-      // Make  add to cart button 80% size (only on PC)
+      cartButton.classList.add("addToCartButton");
+     
+      // Add to cart media queris
       const cartButtonWrapper = document.getElementsByClassName("tee-form-atc-wrapper");
       if(window.innerWidth > 990){
         cartButtonWrapper[0].style.setProperty('width', '80%', 'important');
+        cartButton.style.setProperty('font-size', '1.4rem', 'important');
+        cartButton.style.height = '1.4rem';
       }
+      else{
+        cartButton.style.setProperty('font-size', '2rem', 'important');
+        cartButton.style.height = '2rem';
+      }
+     
 
       // Decrease margin under title and change its color
       const title = document.querySelectorAll("div.product__title > h1:nth-child(1)");
