@@ -314,10 +314,11 @@
       cartButton.style.setProperty('font-weight', '400', 'important');
       cartButton.style.setProperty('letter-spacing', '.1rem', 'important');
 
-      // Make  add to cart button 80% size
+      // Make  add to cart button 80% size (only on PC)
       const cartButtonWrapper = document.getElementsByClassName("tee-form-atc-wrapper");
-      cartButtonWrapper[0].style.setProperty('width', '80%', 'important');
-      console.log(cartButtonWrapper[0]);
+      if(window.innerWidth > 990px){
+        cartButtonWrapper[0].style.setProperty('width', '80%', 'important');
+      }
 
       // Decrease margin under title and change its color
       const title = document.querySelectorAll("div.product__title > h1:nth-child(1)");
