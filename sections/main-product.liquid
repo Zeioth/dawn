@@ -472,7 +472,20 @@ function gads_report_add_to_cart(url) {
                   <div class="product-form__buttons">
                   
                  {% if product.options contains 'Tamaño' %}
-                   <a class="trigger-pop-up btn">Ver cual es mi talla</a>
+<h1>Popup/Modal Windows without JavaScript</h1>
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Here i am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			Thank to pop me out of that button, but now i'm done so you can close this window.
+		</div>
+	</div>
+</div>
                  {% endif %}  
                   
                   <button
