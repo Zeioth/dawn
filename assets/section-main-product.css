@@ -267,7 +267,7 @@ fieldset.product-form__input .form__label {
 
 /*Hover*/
 .product-form__submit:hover {
-  background-color: rgb(212, 33, 39);
+  background-color: #e50000;
 }
 
 /*Normal */
