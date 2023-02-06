@@ -467,7 +467,9 @@ function gads_report_add_to_cart(url) {
                   <span class="product-form__error-message"></span>
                 </div>
 
-                <a class="trigger-pop-up btn">See Size Chart</a>
+                {% if product.options contains 'Tamaño' %}
+                  <a class="trigger-pop-up btn">See Size Chart</a>
+                {% endif %}
             
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
