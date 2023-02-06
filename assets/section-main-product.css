@@ -266,7 +266,7 @@ fieldset.product-form__input .form__label {
 
 /* TODO: Añade el selector padre, para que solo aplique a esta sección, ver componente search como ejemplo */
 /* TODO: Tambien para search, para que no afecte todos los fields del diseño */
-.product-form__buttons{
+.product-form__buttons .button::after{
   box-shadow: none;
 }
 
