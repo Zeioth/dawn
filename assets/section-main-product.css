@@ -266,7 +266,7 @@ fieldset.product-form__input .form__label {
 
 /* TODO: Añade el selector padre, para que solo aplique a esta sección, ver componente search como ejemplo */
 /* TODO: Tambien para search, para que no afecte todos los fields del diseño */
-product-form.has(.button::after, .shopify-challenge__button::after, .customer button::after, .shopify-payment-button__button--unbranded::after){
+product-form:has(.button::after, .shopify-challenge__button::after, .customer button::after, .shopify-payment-button__button--unbranded::after){
   box-shadow: none;
 }
 
