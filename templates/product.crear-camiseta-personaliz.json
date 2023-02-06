@@ -112,6 +112,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "c0efda6e-5fc4-4307-89aa-2ee26a777ce0": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>\n<legend class=\"name-option\"><a href=\"\/pages\/size-chart\">Ver medidas<\/a><\/legend>"
+          }
         }
       },
       "block_order": [
@@ -129,7 +135,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "c0efda6e-5fc4-4307-89aa-2ee26a777ce0"
       ],
       "settings": {
         "enable_sticky_info": true,
