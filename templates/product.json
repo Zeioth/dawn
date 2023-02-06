@@ -63,12 +63,6 @@
           "settings": {
           }
         },
-        "e78965eb-a945-4fda-b289-593e3a7566a5": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<hr>\n{%- assign current_variant = product.selected_or_first_available_variant -%}\nCódigo de artículo: {{ current_variant.sku }}"
-          }
-        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "disabled": true,
@@ -115,6 +109,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "e78965eb-a945-4fda-b289-593e3a7566a5": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<hr>\n{%- assign current_variant = product.selected_or_first_available_variant -%}\nCódigo de artículo: {{ current_variant.sku }}"
+          }
         }
       },
       "block_order": [
@@ -128,12 +128,12 @@
         "eff3986f-a587-4efb-a955-8099a7eb2ddb",
         "buy_buttons",
         "description",
-        "e78965eb-a945-4fda-b289-593e3a7566a5",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "e78965eb-a945-4fda-b289-593e3a7566a5"
       ],
       "settings": {
         "enable_sticky_info": true,
