@@ -270,7 +270,7 @@ fieldset.product-form__input .form__label {
   box-shadow: none;
 }
 
-.product-form__buttons.button::hover{
+.product-form__buttons .button::hover{
   box-shadow: none;
 }
 
