@@ -57,12 +57,6 @@
           "settings": {
           }
         },
-        "eff3986f-a587-4efb-a955-8099a7eb2ddb": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<legend class=\"name-option\"><a href=\"\/pages\/size-chart\">Cual es mi talla?<\/a><\/legend>"
-          }
-        },
         "collapsible-row-0": {
           "type": "collapsible_tab",
           "disabled": true,
@@ -115,6 +109,12 @@
           "settings": {
             "custom_liquid": "<hr>\n{%- assign current_variant = product.selected_or_first_available_variant -%}\nCódigo de artículo: {{ current_variant.sku }}"
           }
+        },
+        "eff3986f-a587-4efb-a955-8099a7eb2ddb": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<legend class=\"name-option\"><a href=\"\/pages\/size-chart\">Cual es mi talla?<\/a><\/legend>"
+          }
         }
       },
       "block_order": [
@@ -127,13 +127,13 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "eff3986f-a587-4efb-a955-8099a7eb2ddb",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
         "share",
-        "e78965eb-a945-4fda-b289-593e3a7566a5"
+        "e78965eb-a945-4fda-b289-593e3a7566a5",
+        "eff3986f-a587-4efb-a955-8099a7eb2ddb"
       ],
       "settings": {
         "enable_sticky_info": true,
