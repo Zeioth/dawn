@@ -316,7 +316,7 @@
 
       // Make  add to cart button 80% size (only on PC)
       const cartButtonWrapper = document.getElementsByClassName("tee-form-atc-wrapper");
-      if(window.innerWidth){
+      if(window.innerWidth > 990){
         cartButtonWrapper[0].style.setProperty('width', '80%', 'important');
       }
 
