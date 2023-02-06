@@ -266,11 +266,8 @@ fieldset.product-form__input .form__label {
 }
 
 /*Hover*/
-.product-form__submit {
-  margin-bottom: 1rem;
-  background-color: #e50000;
-  border-radius: 4px;
-  box-shadow: none;
+.product-form__submit:hover {
+  background-color: rgb(212, 33, 39);
 }
 
 /*Normal */
