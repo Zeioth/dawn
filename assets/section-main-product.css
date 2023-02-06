@@ -270,14 +270,14 @@ fieldset.product-form__input .form__label {
   box-shadow: none;
 }
 
-.product-form__buttons:not([disabled]):hover, .shopify-challenge__button:hover::after, .customer button:hover::after, .shopify-payment-button__button--unbranded:hover::after{
+.product-form__buttons::hover{
   box-shadow: none;
 }
 
 .no-js .product-form__submit.button--secondary {
-  /*--color-button: var(--color-base-accent-1);
+  --color-button: var(--color-base-accent-1);
   --color-button-text: var(--color-base-solid-button-labels);
-  --alpha-button-background: 1;*/
+  --alpha-button-background: 1;
 }
 
 .product-form__submit[aria-disabled="true"] + .shopify-payment-button .shopify-payment-button__button[disabled],
