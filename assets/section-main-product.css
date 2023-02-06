@@ -267,12 +267,12 @@ fieldset.product-form__input .form__label {
 
 /*Normal */
 .product-form__buttons .button::after{
-  box-shadow: none;
+  /*box-shadow: none;*/
 }
 
 /*Hover*/
 .product-form__buttons .button:hover::after{
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0rem 0.5rem rgba(var(--color-foreground), 0.5);
+  box-shadow: none;
 }
 
 .no-js .product-form__submit.button--secondary {
