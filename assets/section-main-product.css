@@ -258,18 +258,18 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__submit {
-  margin-bottom: 1rem;
-  background-color: rgb(212, 33, 39);
-  border-radius: 5px;
-  box-shadow: none;
+
+
 }
 
 /* TODO: Añade el selector padre, para que solo aplique a esta sección, ver componente search como ejemplo */
 /* TODO: Tambien para search, para que no afecte todos los fields del diseño */
+/*Normal state*/
 .product-form__buttons .button::after{
   box-shadow: none;
 }
 
+/*Hover*/
 .product-form__buttons .button:hover::after{
   box-shadow: none;
 }
@@ -278,6 +278,9 @@ fieldset.product-form__input .form__label {
   --color-button: var(--color-base-accent-1);
   --color-button-text: var(--color-base-solid-button-labels);
   --alpha-button-background: 1;
+    margin-bottom: 1rem;
+  background-color: rgb(212, 33, 39);
+  border-radius: 5px;
 }
 
 .product-form__submit[aria-disabled="true"] + .shopify-payment-button .shopify-payment-button__button[disabled],
