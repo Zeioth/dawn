@@ -261,6 +261,7 @@ fieldset.product-form__input .form__label {
   margin-bottom: 1rem;
   background-color: rgb(212, 33, 39);
   border-radius: 5px;
+  box-shadow: none;
 }
 
 /* TODO: Añade el selector padre, para que solo aplique a esta sección, ver componente search como ejemplo */
