@@ -275,12 +275,10 @@ fieldset.product-form__input .form__label {
 }
 
 .no-js .product-form__submit.button--secondary {
-  --color-button: var(--color-base-accent-1);
-  --color-button-text: var(--color-base-solid-button-labels);
-  --alpha-button-background: 1;
     margin-bottom: 1rem;
   background-color: rgb(212, 33, 39);
   border-radius: 5px;
+  
 }
 
 .product-form__submit[aria-disabled="true"] + .shopify-payment-button .shopify-payment-button__button[disabled],
